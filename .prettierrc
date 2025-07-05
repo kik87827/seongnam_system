@@ -1,0 +1,6 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "tabWidth": 2,
+  "proseWrap" : "preserve",
+  "printWidth" : 30000
+}

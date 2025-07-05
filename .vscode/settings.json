@@ -1,0 +1,9 @@
+{
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": false, // 전체 파일에 대해 formatOnSave 비활성화
+  "liveServer.settings.port": 5503,
+  "editor.codeActionsOnSave": {}
+}
