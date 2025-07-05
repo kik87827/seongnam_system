@@ -7,12 +7,12 @@ var gulp = require('gulp'),
     htmlbeautify = require('gulp-html-beautify');
 
 gulp.task('scss', function () {
-    return gulp.src('./src/assets/css/*.scss')
+    return gulp.src('./src/static/css/*.scss')
         .pipe(sourcemaps.init())
         .pipe(scss().on('error', scss.logError))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/assets/css/'));
+        .pipe(gulp.dest('./dist/static/css/'));
 });
 
 gulp.task('htmlbeautify', function () {
@@ -23,9 +23,9 @@ gulp.task('htmlbeautify', function () {
 });
 
 gulp.task('beautify', function () {
-    return gulp.src('./src/assets/js/*.js')
+    return gulp.src('./src/static/js/*.js')
         .pipe(beautify.js({ indent_size: 2 }))
-        .pipe(gulp.dest('./dist/assets/js/'));
+        .pipe(gulp.dest('./dist/static/js/'));
 });
 
 gulp.task('fileinclude', function () {
@@ -40,8 +40,8 @@ gulp.task('fileinclude', function () {
 
 gulp.task('watch', function () {
     gulp.watch(['./src/**.html', './src/*/**.html'], ['fileinclude']);
-    gulp.watch(['./src/assets/css/**/*.scss'], ['scss']);
-    gulp.watch(['./src/assets/js/*.js'], ['beautify']);
+    gulp.watch(['./src/static/css/**/*.scss'], ['scss']);
+    gulp.watch(['./src/static/js/*.js'], ['beautify']);
 });
 
 gulp.task('default', ['scss', 'fileinclude', 'beautify', 'watch']);
