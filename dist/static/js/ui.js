@@ -1,58 +1,71 @@
-window.addEventListener("DOMContentLoaded", () => {
-  uiBase.init();
+$(function() {
+  commonInit();
+  footerFunc();
 });
 
-const uiBase = {
-  init() {
-    // 현재 객체 내의 모든 메서드 순회
-    for (const key in this) {
-      if (typeof this[key] === "function" && key !== "init") {
-        this[key]();
-      }
-    }
-  },
-  commonInit() {
-    let touchstart = "ontouchstart" in window;
-    let userAgent = navigator.userAgent.toLowerCase();
-    if (touchstart) {
-      browserAdd("touchmode");
-    }
-    if (userAgent.indexOf("samsung") > -1) {
-      browserAdd("samsung");
-    }
+function commonInit() {
+  let touchstart = "ontouchstart" in window;
+  let userAgent = navigator.userAgent.toLowerCase();
+  if (touchstart) {
+    browserAdd("touchmode");
+  }
+  if (userAgent.indexOf("samsung") > -1) {
+    browserAdd("samsung");
+  }
 
-    if (
-      navigator.platform.indexOf("Win") > -1 ||
-      navigator.platform.indexOf("win") > -1
-    ) {
-      browserAdd("window");
-    }
+  if (navigator.platform.indexOf("Win") > -1 || navigator.platform.indexOf("win") > -1) {
+    browserAdd("window");
+  }
 
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-      // iPad or iPhone
-      browserAdd("ios");
-    }
+  if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+    // iPad or iPhone
+    browserAdd("ios");
+  }
 
-    function browserAdd(opt) {
-      document.querySelector("html").classList.add(opt);
-    }
-  },
-  setVhProperty() {
-    setProperty();
-    window.addEventListener("resize", () => {
-      setProperty();
-    });
-
-    function setProperty() {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-  },
+  function browserAdd(opt) {
+    document.querySelector("html").classList.add(opt);
+  }
 }
 
+function footerFunc() {
+  var linkSwiper = new Swiper(".partner_item_list", {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 50,
+    speed: 500,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".partner_control_wrap .btn_slick_control.nav_next",
+      prevEl: ".partner_control_wrap .btn_slick_control.nav_prev",
+    },
+  });
+
+  $(".btn_slick_control.nav_auto").on("click", function() {
+    let $this = $(this);
+    $this.toggleClass("play");
+
+    if ($this.hasClass("play")) {
+      linkSwiper.autoplay.stop();
+    } else {
+      linkSwiper.autoplay.start();
+    }
+  });
+
+  $("#btn_partner_global").on("click", function(e) {
+    e.preventDefault();
+    $(".partner_global_layer").slideToggle();
+  });
+  $(".btn_global_close").on("click", function(e) {
+    e.preventDefault();
+    $(".partner_global_layer").slideUp();
+  });
+}
 
 /* popup */
-class DesignPopup {
+/* class DesignPopup {
   constructor(option) {
     // variable
     this.option = option;
@@ -167,10 +180,9 @@ class DesignPopup {
       }
     }
   }
-}
+} */
 
-
-function designModal(option) {
+/* function designModal(option) {
   const modalGroupCreate = document.createElement("div");
   let domHtml = document.querySelector("html");
   let design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
@@ -309,4 +321,4 @@ function designModal(option) {
       modal_item.remove();
     }, 500);
   }
-}
+} */

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>텍스트 슬라이더</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="./static/css/style.css" />
+
+    <style>
+      body {
+        margin: 0;
+        background: #f5f5f5;
+        font-family: sans-serif;
+      }
+      .link-slider-wrap {
+        background: #f5f5f5;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .swiper-container {
+        width: 100%;
+      }
+      .swiper-slide {
+        white-space: nowrap;
+        padding: 0 15px;
+        color: #555;
+        font-size: 14px;
+        line-height: 40px;
+        width: auto;
+        flex-shrink: 0;
+      }
+
+      /* 컨트롤 버튼 영역 */
+      .slider-controls {
+        display: inline-block;
+        margin-left: 10px;
+        white-space: nowrap;
+      }
+      .slider-controls button {
+        background: #ddd;
+        border: none;
+        padding: 5px 8px;
+        margin-left: 5px;
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="link-slider-wrap">
+      <!-- Swiper -->
+      <div class="swiper-container" id="linkSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">성남시 의료원</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">성남TV</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">건축행정시스템세움터</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">아이사랑놀이터</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">성남시사회적기업지원센터</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">성남시니어산업혁신센터</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">지방공기업경영정보공개</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+          <div class="swiper-slide"><a href="#" target="_blank" class="partner_item">테스트테스트</a></div>
+        </div>
+      </div>
+
+      <!-- 컨트롤 버튼 -->
+      <div class="slider-controls">
+        <button id="viewAllBtn">전체</button>
+        <button id="prevBtn">&laquo;</button>
+        <button id="pauseBtn">⏸</button>
+        <button id="nextBtn">&raquo;</button>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="./static/js/jquery-1.12.4.min.js"></script>
+    <script src="./static/js/swiper.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        var linkSwiper = new Swiper("#linkSlider", {
+          loop: true,
+          /* loopedSlides: 7, */
+          slidesPerView: "auto",
+          spaceBetween: 10,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: "#nextBtn",
+            prevEl: "#prevBtn",
+          },
+        });
+
+        // Pause / Play toggle
+        var isPaused = false;
+        var pauseBtn = document.getElementById("pauseBtn");
+        pauseBtn.onclick = function () {
+          if (isPaused) {
+            linkSwiper.autoplay.start();
+            pauseBtn.innerHTML = "⏸";
+          } else {
+            linkSwiper.autoplay.stop();
+            pauseBtn.innerHTML = "▶";
+          }
+          isPaused = !isPaused;
+        };
+
+        // 전체 버튼 클릭 시 예시 동작
+        document.getElementById("viewAllBtn").onclick = function () {
+          alert("전체 보기 클릭됨");
+          // 필요시 레이어 열기 or 새창 열기 등 구현
+        };
+      });
+    </script>
+  </body>
+</html>

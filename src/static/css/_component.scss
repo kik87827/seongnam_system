@@ -1,0 +1,16 @@
+/* slick */
+.slick_control_list{
+    display:table;
+    > li{
+        display:table-cell;vertical-align: middle;
+    }
+}
+.btn_slick_control{
+    width:20px;height:20px; @include bgicon; display:inline-block;
+    &.nav_prev{background-image:url("../images/ico_control_prev_20.png");}
+    &.nav_next{background-image:url("../images/ico_control_next_20.png");}
+    &.nav_auto{
+        background-image:url("../images/ico_control_pp_20.png");
+        &.play{background-position:0 100%;}
+    }
+}
