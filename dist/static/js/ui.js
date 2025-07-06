@@ -1,5 +1,9 @@
 $(function() {
   commonInit();
+
+});
+
+$(window).on("load", function() {
   footerFunc();
 });
 
