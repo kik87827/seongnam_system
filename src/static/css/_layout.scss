@@ -1,7 +1,7 @@
 /* layout */
 
 .page_wrap{
-   
+   min-width:1280px;
 }
 .header_wrap{}
 .header_main_row{background:#f3f3f3;}
@@ -243,4 +243,90 @@ select.header_total_select:disabled{background-color:#f7f7f7;color:#999999;;opac
 .footer_banner_item{
     display:inline-block;
     img{max-width:100%;}
+}
+
+.sub_middle_wrap{padding:45px;}
+.middle_template{
+    display:table; width:100%; table-layout: fixed;
+}
+.middle_left_panel,
+.empty_margin_panel,
+.middle_right_panel{display:table-cell;vertical-align: top;}
+.middle_left_panel{width:240px;}
+.middle_right_panel{margin-left:30px;text-align: left;}
+.empty_margin_panel{width:30px;}
+
+.left_card_top{display:table;width:100%;height:80px; text-align: center; border-radius: 10px; background:#383c3f; margin-bottom:10px;}
+.left_card_td{display:table-cell;vertical-align: middle;}
+.left_card_toptext{@include font(20px,500,1,#fff); @include Paperlogy;}
+
+.left_card_container{border:1px solid #d7d7d7; border-radius:8px; padding-bottom:30px;}
+.left_navmenu_list{
+    > li{
+        &.active{
+            .left_navmenu_one{
+                background:#92347e; color:#fff;
+                &:after{display:none}
+            }
+            .left_navmenu_two_container{
+
+            }
+            .left_navmenu_two_list{
+                > li{}
+            }
+            .left_navmenu_two{
+                .text_node{}
+            }
+        }
+        &:last-of-type{
+            .left_navmenu_one{
+                &:after{display:none;}
+            }
+        }
+    }
+}
+.left_navmenu_one{
+    display:block; padding:15px 20px; position:relative;
+    @include font(16px,500,1.4,#000); @include Paperlogy;
+    &:after{display:block;content:'';width:calc(100% - 40px); height:1px; position:absolute;bottom:0;left:20px; background:#d7d7d7;}
+}
+.left_navmenu_two_container{
+    background:#f8f2f7; display:none;
+}
+.left_navmenu_two_list{
+    padding:20px 30px;
+    > li{
+        margin-bottom:20px;
+        &.active{
+            .left_navmenu_two{
+                &:before{opacity:1;}
+                .text_node{color:#77015e;}
+            }
+        }
+        &:last-of-type{margin-bottom:0;}
+    }
+}
+.left_navmenu_two{
+    display:inline-block;position:relative;
+    &:hover{
+        &:before{opacity:1;}
+        .text_node{color:#77015e;}
+    }
+    .text_node{
+        @include font(14px,500,1.4,#000); @include Paperlogy; position:relative; z-index:1;
+    }
+    &:before{display:block;content:''; opacity:0; border-radius:100px;height:14px; background:#e6c8de; position:absolute;bottom:-4px;left:-10px; width:calc(100% + 20px);}
+}
+
+.sub_right_title_row{padding-bottom:17px;margin-bottom:17px;border-bottom:1px solid #77015e;}
+.sub_right_title{@include font(22px,500,1.4,#000); @include Paperlogy;}
+.sub_contents{}
+
+@media (max-width:1350px){
+    .header_nav_list{
+        > li{padding-right:50px;}
+    }
+    .header_nav_main_wrap{padding-right:80px;}
+    .header_total_tb .long_cols{min-width:200px;}
+    .util_direct_long{width:140px;}
 }
