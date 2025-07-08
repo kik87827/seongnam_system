@@ -326,3 +326,69 @@ function footerFunc() {
     }, 500);
   }
 } */
+
+
+function popupShow(option){
+  $(function(){
+    var $target = $(option.target) || option.target;
+    var $target_close = $target.find(".close_trigger,.btn_layer_close");
+    var $page_wrap = $(".page_wrap");
+    var $popup_wrap = $(".popup_wrap");
+    var $html_body = $("html,body");
+    var $layer_dim = null;
+    var setTimer = 0;
+
+    
+  
+    if($(".layer_dim").length === 0){
+      $page_wrap.append("<div class='layer_dim' />");
+      $layer_dim = $(".layer_dim");
+    }
+    
+    if(!!$target){
+      $popup_wrap.not($target).hide();
+      console.log();
+      $layer_dim.fadeIn();
+      $target.fadeIn();
+  
+      if(setTimer){clearTimeout(setTimer)}
+      setTimer = setTimeout(function(){
+        if("callback" in option){
+          option.callback();
+        }
+      },520);
+  
+      $html_body.addClass("touchDis");
+  
+      $target_close.on("click",function(){
+        popupHide({
+          target : $(this).closest(".popup_wrap")
+        });
+      });
+    }
+  });
+}
+
+function popupHide(option){
+  $(function(){
+    var $target = $(option.target) || option.target;
+    var $html_body = $("html,body");
+    var $layer_dim = $(".layer_dim");
+    var setTimer = 0;
+
+    
+    if(!!$target){
+      $layer_dim.fadeOut(function(){
+        $layer_dim.remove();
+      });
+      $target.fadeOut();
+      if(setTimer){clearTimeout(setTimer)}
+      setTimer = setTimeout(function(){
+        if("callback" in option){
+          option.callback();
+        }
+      },520);
+      $html_body.removeClass("touchDis");
+    }
+  });
+}
