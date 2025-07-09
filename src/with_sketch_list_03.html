@@ -14,56 +14,57 @@
             </div>
             <div class="sub_contents">
               <h3 class="sub_cont_tit">동행스케치 현황</h3>
-              <div class="sort_line_wrap">
-                <div class="sort_line_inner">
-                  <div class="sort_line_item">
-                    <p class="sort_line_tit">항목</p>
-                    <div class="sort_line_select">
-                      <select required="" class="form_select">
-                        <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
-                        <option value="opt_01">항목1</option>
-                        <option value="opt_02">항목2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="sort_col_item">
-                    <p class="sort_col_tit">신청동</p>
-                    <div class="sort_line_select">
-                      <select required="" class="form_select">
-                        <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
-                        <option value="opt_01">항목1</option>
-                        <option value="opt_02">항목2</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="sort_line_inner">
-                  <div class="sort_col_item">
-                    <p class="sort_col_tit">답변여부</p>
-                    <div class="sort_line_select">
-                      <select required="" class="form_select">
-                        <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
-                        <option value="opt_01">답변여부1</option>
-                        <option value="opt_02">답변여부2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="sort_line_item">
-                    <p class="sort_line_tit">지정일자</p>
-                    <div class="sort_date_wrap">
-                      <div class="sort_date_item">
-                        <input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
-                      </div>
-                      <span class="date_flow">~</span>
-                      <div class="sort_date_item">
-                        <input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
-                      </div>
-                    </div>
-                    <div class="sort_col_item">
-                      <button class="btn_search_gray">날짜 초기화</button>
-                    </div>
-                  </div>
-                </div>
+
+              <div class="sort_tb_wrap">
+                <table class="sort_tb">
+                  <caption>동행스케치 테이블</caption>
+                  <tbody>
+                    <tr>
+                      <th>항목</th>
+                      <td>
+                        <select required="" class="form_select">
+                          <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+                          <option value="opt_01">옵션1</option>
+                          <option value="opt_02">옵션2</option>
+                        </select>
+                      </td>
+                      <th>신청동</th>
+                      <td>
+                        <select required="" class="form_select">
+                          <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+                          <option value="opt_01">옵션1</option>
+                          <option value="opt_02">옵션2</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>답변여부</th>
+                      <td>
+                        <select required="" class="form_select">
+                          <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+                          <option value="opt_01">옵션1</option>
+                          <option value="opt_02">옵션2</option>
+                        </select>
+                      </td>
+                      <th>지정일자</th>
+                      <td>
+                        <div class="sort_date_wrap">
+                          <div class="sort_date_item">
+                            <input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
+                          </div>
+                          <span class="date_flow">~</span>
+                          <div class="sort_date_item">
+                            <input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
+                          </div>
+                        </div>
+                        <div class="sort_col_item">
+                          <button class="btn_search_gray">날짜 초기화</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
                 <div class="btn_right_wrap">
                   <div class="btn_float_left">
                     <button class="adm_btn btn_gray">초기화</button>
