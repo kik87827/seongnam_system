@@ -3278,6 +3278,8 @@ a.ui-button:active,
   position: relative; }
   .popup_item.size2 {
     max-width: 385px; }
+  .popup_item.size3 {
+    max-width: 570px; }
   .popup_item.skin2 {
     padding: 30px 20px; }
     .popup_item.skin2 .popup_title_row {
@@ -3292,7 +3294,8 @@ a.ui-button:active,
   font-size: 26px;
   font-weight: 500;
   line-height: 1.3;
-  color: #000; }
+  color: #000;
+  font-family: 'Paperlogy'; }
 
 .btn_layer_close {
   width: 35px;
@@ -3304,6 +3307,15 @@ a.ui-button:active,
   background-size: 10px;
   background-position: 50% 50%;
   background-image: url("../images/btn_layer_close_x2.png"); }
+
+.popup_cont_tit {
+  margin-bottom: 15px;
+  margin-left: 5px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000;
+  font-family: 'Paperlogy'; }
 
 /* contents */
 /* 분류 검색 */
@@ -3337,7 +3349,8 @@ a.ui-button:active,
   font-size: 16px;
   font-weight: 400;
   line-height: 54px;
-  color: #000; }
+  color: #000;
+  font-family: 'Paperlogy'; }
 
 .sort_col_select {
   float: left; }
@@ -3351,20 +3364,24 @@ a.ui-button:active,
   font-weight: 400;
   line-height: normal;
   color: #000;
-  border-radius: 40px;
+  border-radius: 100px;
   border-color: #fff;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   -ms-appearance: none;
-  background-position: 226px 50%;
+  background-position: top 50% right 5px;
   background-repeat: no-repeat;
   background-size: 25px auto;
   background-image: url(../images/ico_select_arrow_34.png); }
   .form_select::-ms-expand {
     display: none; }
-  .form_select:required:invalid {
-    color: #aaa; }
+  .form_select.tb_border {
+    width: 100%;
+    border: 1px solid #dedede;
+    margin: 0; }
+  .form_select.w150 {
+    width: 150px; }
 
 .sort_col_input {
   width: 289px;
@@ -3405,35 +3422,87 @@ a.ui-button:active,
     background-position: 0 0;
     background-image: url(../images/ico_serach_w_16.png); }
 
-.sort_line_wrap {
+.sort_tb_wrap {
   margin-bottom: 30px;
   border-top: 1px solid #a50082; }
+  .sort_tb_wrap table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px; }
+  .sort_tb_wrap tr {
+    height: 54px;
+    border-bottom: 1px solid #dedede; }
+  .sort_tb_wrap th {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    color: #8b1c74;
+    background-color: rgba(165, 0, 130, 0.1);
+    font-family: 'Paperlogy'; }
+  .sort_tb_wrap td {
+    text-align: left; }
+  .sort_tb_wrap th, .sort_tb_wrap td {
+    padding: 10px;
+    box-sizing: border-box; }
+  .sort_tb_wrap input[type="text"] {
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
+    letter-spacing: -0.04em;
+    border: 1px solid #dedede;
+    border-radius: 100px;
+    box-sizing: border-box; }
+    .sort_tb_wrap input[type="text"].datepicker {
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      -ms-appearance: none;
+      background-position: top 50% right 12px;
+      background-repeat: no-repeat;
+      background-size: 17px auto;
+      background-image: url(../images/ico_calendar_17.png); }
+      .sort_tb_wrap input[type="text"].datepicker:-moz-read-only {
+        background-color: #fff; }
+      .sort_tb_wrap input[type="text"].datepicker:read-only {
+        background-color: #fff; }
+  .sort_tb_wrap .sort_tb_select {
+    width: 110px; }
+  .sort_tb_wrap .sort_date_wrap {
+    float: left; }
+  .sort_tb_wrap .adm_btn.sort_btn {
+    margin-left: 10px; }
 
-.sort_line_inner {
-  font-family: 'Paperlogy';
-  height: 54px;
-  padding: 0 20px;
-  background-color: rgba(215, 215, 215, 0.3);
-  border-radius: 10px; }
-  .sort_line_inner::after {
-    content: '';
-    display: block;
-    clear: both; }
-
-.sort_line_item {
-  float: left;
-  line-height: 54px; }
-
-.sort_line_tit {
-  float: left;
-  font-size: 16px;
+.btn_txt_input {
+  width: 110px;
+  height: 35px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 54px;
-  color: #77015e;
-  background-color: rgba(165, 0, 130, 0.1); }
-
-.sort_line_select {
-  float: left; }
+  line-height: normal;
+  color: #000;
+  border: 1px solid #dedede;
+  border-radius: 100px;
+  box-sizing: border-box; }
+  .btn_txt_input.datepicker {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -ms-appearance: none;
+    background-position: top 50% right 12px;
+    background-repeat: no-repeat;
+    background-size: 17px auto;
+    background-image: url(../images/ico_calendar_17.png); }
+    .btn_txt_input.datepicker:-moz-read-only {
+      background-color: #fff; }
+    .btn_txt_input.datepicker:read-only {
+      background-color: #fff; }
+  .btn_txt_input.type_wd {
+    width: 240px !important; }
+  .btn_txt_input.w100per {
+    width: 100% !important;
+    letter-spacing: 0; }
 
 /* 날짜 검색 */
 .sort_date_wrap::after {
@@ -3444,8 +3513,7 @@ a.ui-button:active,
 .sort_date_item {
   position: relative;
   display: inline-block;
-  float: left;
-  width: 138px; }
+  float: left; }
   .sort_date_item:after {
     background-image: url("../images/ico_calendar_17.png");
     background-repeat: no-repeat;
@@ -3464,22 +3532,27 @@ a.ui-button:active,
       color: #aaa; }
 
 .date_flow {
+  float: left;
   display: inline-block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
+  margin: 0 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 35px;
   color: #000; }
 
 /* board layout */
 .board_sort_row {
-  float: left;
   margin-bottom: 15px; }
   .board_sort_row::after {
     content: '';
     display: block;
     clear: both; }
-  .board_sort_row .search_cols .form_select {
-    min-width: 120px; }
+  .board_sort_row .fraction_cols {
+    float: left; }
+  .board_sort_row .search_cols {
+    float: right; }
+    .board_sort_row .search_cols .form_select {
+      min-width: 120px; }
   .board_sort_row.type2 {
     background: none;
     padding: 0; }
@@ -3487,13 +3560,13 @@ a.ui-button:active,
 .sort_fraction_text {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 35px;
   color: #000; }
   .sort_fraction_text strong {
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
-    color: #77015e;
+    color: #a50082;
     font-family: 'Paperlogy'; }
 
 .board_list_row {
@@ -3658,6 +3731,11 @@ a.ui-button:active,
     .list_table tbody td.nodata_td {
       padding-top: 100px;
       padding-bottom: 100px; }
+  .list_table .cont_ellipsis {
+    max-width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
 
 .list_table_thtext,
 .list_table_tdtext {
@@ -3709,7 +3787,7 @@ a.ui-button:active,
   height: 29px;
   text-align: center;
   background-repeat: no-repeat;
-  background-size: 16px auto;
+  background-size: 30px auto;
   background-position: 50% 50%; }
   .btn_paging_control.first {
     background-image: url("../images/ico_paging_first.png"); }
@@ -3791,6 +3869,77 @@ a.ui-button:active,
   .adm_btn.btn_gray {
     background-color: #2f2f2f;
     color: #fff; }
+  .adm_btn.btn_lightgray {
+    background-color: #606060;
+    color: #fff; }
+  .adm_btn.sort_btn {
+    width: 90px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #353535;
+    background-color: #e3e3e3;
+    letter-spacing: -0.04em; }
+  .adm_btn.sort_btn_vari {
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #353535;
+    background-color: #e3e3e3; }
+
+.popup_wrap#reportPopup .sort_tb_wrap {
+  margin-bottom: 21px; }
+
+.popup_wrap#reportPopup .popup_item.pad25 {
+  padding: 25px; }
+
+.popup_wrap#reportPopup .popup_item.pad3020 {
+  padding: 30px 20px; }
+
+.props_item_list {
+  display: flex;
+  gap: 10px 36px;
+  gap: 24px; }
+  .props_item_list.gap_type2 {
+    gap: 36px; }
+
+.props_item {
+  display: flex;
+  gap: 4px; }
+
+input.props_dom {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  background-image: url("../images/ico_checkbox_22.png");
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+  box-sizing: content-box; }
+  input.props_dom[type="radio"] {
+    border-radius: 100%;
+    background-image: url("../images/ico_radio.png"); }
+    input.props_dom[type="radio"]:checked {
+      border-color: #4285F4; }
+  input.props_dom:checked {
+    background-position: 0 100%; }
+
+.props_label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  display: inline-block;
+  padding-top: 2px;
+  cursor: pointer; }
 
 /* datepicker */
 .ui-widget-header {
@@ -3863,18 +4012,12 @@ a.ui-button:active,
 .ui-datepicker-calendar {
   width: 100%; }
 
-.ui-datepicker-calendar > thead > tr,
-.ui-datepicker-calendar > tbody > tr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0 2px; }
-
 .ui-datepicker-calendar > thead > tr > th {
   width: 24px;
   height: 24px;
   font-size: 20px;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 24px; }
 
 .ui-datepicker-calendar > tbody > tr {
   padding: 4px 0; }
@@ -3905,7 +4048,8 @@ a.ui-button:active,
   cursor: pointer;
   font-weight: 100;
   text-align: center;
-  font-size: 12px; }
+  font-size: 12px;
+  line-height: 24px; }
 
 .ui-datepicker-calendar > tbody > tr > td:hover {
   background-color: transparent;

@@ -364,20 +364,28 @@
 						<div class="sort_tb_wrap">
 							<table class="sort_tb">
 								<caption>동행스케치 테이블</caption>
+								<colgroup>
+									<col style="width: 12%" />
+									<col />
+									<col style="width: 12%" />
+									<col />
+								</colgroup>
 								<tbody>
 									<tr>
 										<th>항목</th>
 										<td>
-											<select required="" class="form_select">
-												<option value="" disabled="" selected="" hidden="">-- 전체 --</option>
-												<option value="opt_01">항목1</option>
-												<option value="opt_02">항목2</option>
-											</select>
+											<div class="sort_tb_select">
+												<select required="" class="form_select tb_border">
+													<option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+													<option value="opt_01">항목1</option>
+													<option value="opt_02">항목2</option>
+												</select>
+											</div>
 										</td>
 										<th>지정부서</th>
 										<td>
-											<input type="text" class="btn_txt_input" disabled />
-											<button class="btn_search_gray">부서검색</button>
+											<input type="text" class="btn_txt_input type_wd" disabled />
+											<button class="adm_btn sort_btn">부서검색</button>
 										</td>
 									</tr>
 									<tr>
@@ -385,17 +393,27 @@
 										<td>
 											<div class="sort_date_wrap">
 												<div class="sort_date_item">
-													<input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
+													<input type="text" class="datepicker inp" readonly />
 												</div>
 												<span class="date_flow">~</span>
 												<div class="sort_date_item">
-													<input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
+													<input type="text" class="btn_txt_input datepicker inp" readonly />
 												</div>
 											</div>
+											<button class="adm_btn sort_btn">날짜 초기화</button>
 										</td>
 										<th>보고일</th>
 										<td>
-											<input type="text" class="btn_txt_input" disabled />
+											<div class="sort_date_wrap">
+												<div class="sort_date_item">
+													<input type="text" class="datepicker inp" readonly />
+												</div>
+												<span class="date_flow">~</span>
+												<div class="sort_date_item">
+													<input type="text" class="btn_txt_input datepicker inp" readonly />
+												</div>
+											</div>
+											<button class="adm_btn sort_btn">날짜 초기화</button>
 										</td>
 									</tr>
 								</tbody>
@@ -414,7 +432,7 @@
 								<div class="fraction_cols">
 									<span class="sort_fraction_text">
 										총
-										<strong>204</strong>
+										<strong>4</strong>
 										건이 조회되었습니다.
 									</span>
 								</div>
@@ -422,12 +440,13 @@
 							<div class="board_list_row">
 								<div class="list_table_wrap">
 									<table class="list_table type2">
+										<caption>조회 결과</caption>
 										<thead>
 											<tr>
 												<th class="has_total_dom">
 													<div class="props_item">
 														<input type="checkbox" class="props_dom" id="list_total_chk" />
-														<label for="list_total_chk" class="props_label">전체 선택</label>
+														<label for="list_total_chk" class="props_label hdtext">전체 선택</label>
 													</div>
 												</th>
 												<th>순번</th>
@@ -443,7 +462,7 @@
 												<td class="has_form"><input type="checkbox" class="props_dom" /></td>
 												<td>4</td>
 												<td>시민생활 정보 안내</td>
-												<td>주민자치위원 중 유관기관장 임기 규정 개선 주민자치위원 중 유관기관장 임기 규정 개선</td>
+												<td class="cont_ellipsis">주민자치위원 중 유관기관장 임기 규정 개선 주민자치위원 중 유관기관장 임기 규정 개선</td>
 												<td>도시계획과</td>
 												<td>2025-06-24</td>
 												<td></td>
@@ -452,7 +471,7 @@
 												<td class="has_form"><input type="checkbox" class="props_dom" disabled /></td>
 												<td>3</td>
 												<td>지역현안 및 조치사항</td>
-												<td>기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+												<td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
 												<td>문화관광과</td>
 												<td>2025-06-24</td>
 												<td>2025-06-24</td>
@@ -461,7 +480,7 @@
 												<td class="has_form"><input type="checkbox" class="props_dom" disabled /></td>
 												<td>2</td>
 												<td>지역현안 및 조치사항</td>
-												<td>기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+												<td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
 												<td>문화관광과</td>
 												<td>2025-06-24</td>
 												<td>2025-06-24</td>
@@ -470,7 +489,7 @@
 												<td class="has_form"><input type="checkbox" class="props_dom" disabled /></td>
 												<td>1</td>
 												<td>지역현안 및 조치사항</td>
-												<td>기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+												<td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
 												<td>문화관광과</td>
 												<td>2025-06-24</td>
 												<td>2025-06-24</td>
@@ -483,7 +502,7 @@
 							<div class="btn_float_wrap">
 								<div class="btn_float_left">
 									<button class="adm_btn btn_pink_txt" id="btnReport">보고하기</button>
-									<button class="adm_btn btn_gray">활동보고서</button>
+									<button class="adm_btn btn_lightgray">활동보고서</button>
 								</div>
 								<div class="btn_float_right">
 									<button class="adm_btn btn_pink_bg">등록</button>
@@ -522,26 +541,27 @@
 		<div class="popup_item_tb_wrap">
 			<div class="popup_item_tb">
 				<div class="popup_item_td">
-					<div class="popup_item size2">
+					<div class="popup_item size2 pad25">
 						<div class="popup_title_row">
 							<h3 class="popup_title">보고하기</h3>
 						</div>
 						<div class="popup_contents_row">
-							<div class="sort_line_wrap">
-								<div class="sort_line_inner">
-									<div class="sort_line_item">
-										<p class="sort_line_tit">보고일자</p>
-										<div class="sort_date_wrap">
-											<div class="sort_date_item">
-												<input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
-											</div>
-										</div>
-									</div>
-									<div class="btn_right_wrap">
-										<button class="adm_btn btn_pink_txt">저장</button>
-										<button class="adm_btn btn_gray btn_sm btn_layer_close">닫기</button>
-									</div>
-								</div>
+							<div class="sort_tb_wrap">
+								<table class="sort_tb">
+									<caption>동행스케치 테이블</caption>
+									<colgroup>
+										<col style="width: 30%" />
+										<col />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>보고일자</th>
+											<td>
+												<input type="text" class="btn_txt_input w100per datepicker inp" readonly />
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 						<div class="popup_btn_row btn_box_wrap">
@@ -550,7 +570,7 @@
 								<span class="text_node">저장</span>
 							</a>
 							<a href="#" class="btn_box close_trigger">
-								<span class="text_node">취소</span>
+								<span class="text_node">닫기</span>
 							</a>
 						</div>
 						<a href="javascript:;" class="btn_layer_close">
