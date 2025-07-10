@@ -51,14 +51,24 @@
         &.sort_file_label {margin-left: 0;}
     }
 }
+.view_area {width: 100%; padding: 0 10px; @include font(16px,400,1.8,#000);}
 input[type="text"].fr_input_txt {
     width: 110px; height: 35px; @include font(14px,400,normal,#000); border: 1px solid #dedede; border-radius: 100px; padding: 0 15px; box-sizing: border-box; background-color: #fff;
     &.datepicker {
-        appearance: none; -ms-appearance: none; background-position: top 50% right 12px; background-repeat:no-repeat; background-size:17px auto; background-image: url(../images/ico_calendar_17.png);
+        letter-spacing: -0.03em; appearance: none; -ms-appearance: none; background-position: top 50% right 12px; background-repeat:no-repeat; background-size:17px auto; background-image: url(../images/ico_calendar_17.png);
         &:read-only {background-color: #fff;}
+        &.gray {
+            width: 140px !important; background-color: rgba(222,222,222,0.3); color: #000;
+            &:read-only {background-color: rgba(222,222,222,0.3);}
+            &::placeholder {color: #000;}
+        }
     }
     &.type2 {
         width: 100% !important; letter-spacing: 0; background-color: rgba(222,222,222,0.3); color: #000;
+        &::placeholder {color: #000;}
+    }
+    &.type3 {
+        letter-spacing: 0; background-color: rgba(222,222,222,0.3); color: #000;
         &::placeholder {color: #000;}
     }
     &.type_wd {width: 240px !important;}
@@ -250,8 +260,10 @@ input[type="text"].fr_input_txt {
     }
     .btn_float_right {
         float: right;
-        > button:first-child {float: left; margin-right: 10px;}
-        > button:last-child {float: right;}
+        > button {
+            &:not(:last-child) {float: left; margin-right: 10px;}
+            &:last-child {float: left; }
+        }
     }
 }
 .btn_right_wrap {text-align: right;}
