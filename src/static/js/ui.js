@@ -6,6 +6,7 @@ $(function () {
 $(window).on("load",function(){
   footerFunc();
   datePickEvt();
+  fileUpload();
 });
 
 function commonInit() {
@@ -417,5 +418,14 @@ function datePickEvt() {
     $(".datepicker").datepicker({
       minDate: 0,
     });
+  });
+}
+
+function fileUpload() {
+  $(function(){
+    $("#file_upload").on("change", function () {
+        var fileName = $("#file_upload").val();
+        $(".sort_file_txt").html(fileName);
+      });
   });
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      <!-- middle -->
+      <section class="sub_middle_wrap">
+        <div class="middle_template">
+          @@include('./subleft.html')
+          <div class="empty_margin_panel"></div>
+          <div class="middle_right_panel">
+            <div class="sub_right_title_row">
+              <h2 class="sub_right_title">동행스케치</h2>
+            </div>
+            <div class="sub_contents">
+              <h3 class="sub_cont_tit">동행스케치 등록</h3>
+
+              <div class="sort_tb_wrap">
+                <table class="sort_tb">
+                  <caption>동행스케치 등록 테이블</caption>
+                  <colgroup>
+                    <col style="width: 12%" />
+                    <col />
+                    <col style="width: 12%" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>동 행정복지센터</th>
+                      <td><input type="text" class="fr_input_txt type2" placeholder="신흥1동" /></td>
+                      <th>제출일</th>
+                      <td><input type="text" class="fr_input_txt w140 datepicker inp" placeholder="" readonly /></td>
+                    </tr>
+                    <tr>
+                      <th>직위</th>
+                      <td><input type="text" class="fr_input_txt type2" placeholder="동장" /></td>
+                      <th>보고일</th>
+                      <td><input type="text" class="fr_input_txt type2" placeholder="홍길동" /></td>
+                    </tr>
+                    <tr class="sort_divi_line">
+                      <th>항목</th>
+                      <td colspan="3">
+                        <div class="sort_select_wrap">
+                          <select required="" class="form_select tb_border">
+                            <!-- <option value="" disabled="" selected="" hidden="">-- 전체 --</option> -->
+                            <option value="opt_01">시책사업에 대한 제언</option>
+                            <option value="opt_02">지역 현안 및 조치 사항</option>
+                            <option value="opt_03">시민생활 정보 안내</option>
+                          </select>
+                          <p class="sort_select_noti">* 항목을 선택하시면 항목에 맞는 양식이 나타납니다.</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>사업명</th>
+                      <td colspan="3">
+                        <input type="text" class="fr_input_txt w100per" placeholder="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>주요내용</th>
+                      <td colspan="3">
+                        <textarea class="sort_textarea"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>첨부파일</th>
+                      <td>
+                        <div class="sort_file_wrap">
+                          <label for="file_upload" class="sort_file_label adm_btn sort_btn">
+                            <span>파일 선택</span>
+                            <input type="file" id="file_upload" class="sort_file_btn" />
+                          </label>
+                          <p class="sort_file_txt">선택된 파일이 없습니다.</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>담당부서지정</th>
+                      <td>
+                        <input type="text" class="fr_input_txt type2 w195" />
+                        <button class="adm_btn sort_btn">부서 검색</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="btn_float_wrap">
+                  <div class="btn_float_right">
+                    <button class="adm_btn btn_pink_bg">저장</button>
+                    <button class="adm_btn btn_gray">취소</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+    </div>
+  </body>
+</html>
