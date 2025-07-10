@@ -3939,6 +3939,8 @@ input.props_dom {
     background-image: url("../images/ico_radio.png"); }
     input.props_dom[type="radio"]:checked {
       border-color: #4285F4; }
+  input.props_dom::-ms-expand {
+    display: none; }
   input.props_dom:checked {
     background-position: 0 100%; }
 
@@ -4111,7 +4113,7 @@ input.props_dom {
   width: 24px;
   height: 24px;
   border: 0px;
-  background: #0B51C5;
+  background: #77015e;
   color: #fff;
   border-radius: 50%; }
 
