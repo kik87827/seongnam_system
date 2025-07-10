@@ -4,6 +4,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": false, // 전체 파일에 대해 formatOnSave 비활성화
-  "liveServer.settings.port": 5503,
-  "editor.codeActionsOnSave": {}
+  "liveServer.settings.port": 5504,
+  "editor.codeActionsOnSave": {},
+  "files.exclude": {
+    // "**/dist/**/*.html": true // dist 파일 내 html 파일 숨김
+  }
 }

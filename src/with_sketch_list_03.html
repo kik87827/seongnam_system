@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      <!-- middle -->
+      <section class="sub_middle_wrap">
+        <div class="middle_template">
+          @@include('./subleft.html')
+          <div class="empty_margin_panel"></div>
+          <div class="middle_right_panel">
+            <div class="sub_right_title_row">
+              <h2 class="sub_right_title">동행스케치</h2>
+            </div>
+            <div class="sub_contents">
+              <h3 class="sub_cont_tit">동행스케치 현황</h3>
+
+              <div class="sort_tb_wrap">
+                <table class="sort_tb">
+                  <caption>동행스케치 테이블</caption>
+                  <colgroup>
+                    <col style="width: 12%" />
+                    <col />
+                    <col style="width: 12%" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>항목</th>
+                      <td>
+                        <div class="sort_tb_select">
+                          <select required="" class="form_select tb_border">
+                            <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+                            <option value="opt_01">옵션1</option>
+                            <option value="opt_02">옵션2</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>신청동</th>
+                      <td>
+                        <div class="sort_tb_select">
+                          <select required="" class="form_select tb_border">
+                            <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+                            <option value="opt_01">옵션1</option>
+                            <option value="opt_02">옵션2</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>답변여부</th>
+                      <td>
+                        <div class="sort_tb_select">
+                          <select required="" class="form_select tb_border">
+                            <option value="" disabled="" selected="" hidden="">-- 전체 --</option>
+                            <option value="opt_01">옵션1</option>
+                            <option value="opt_02">옵션2</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>지정일자</th>
+                      <td>
+                        <div class="sort_date_wrap">
+                          <div class="sort_date_item">
+                            <input type="text" class="datepicker inp" readonly />
+                          </div>
+                          <span class="date_flow">~</span>
+                          <div class="sort_date_item">
+                            <input type="text" class="btn_txt_input datepicker inp" readonly />
+                          </div>
+                        </div>
+                        <button class="adm_btn sort_btn">날짜 초기화</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="btn_right_wrap">
+                  <div class="btn_float_left">
+                    <button class="adm_btn btn_gray">초기화</button>
+                    <button class="btn_data_search">조회</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="board_container">
+                <div class="board_sort_row">
+                  <div class="fraction_cols">
+                    <span class="sort_fraction_text">
+                      총
+                      <strong>4</strong>
+                      건이 조회되었습니다.
+                    </span>
+                  </div>
+                  <div class="search_cols">
+                    <ul class="inline_ring_list">
+                      <li class="ring_short">
+                        <select class="form_select tb_border">
+                          <option>10건</option>
+                        </select>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="board_list_row">
+                  <div class="list_table_wrap">
+                    <table class="list_table type2">
+                      <thead>
+                        <tr>
+                          <th>순번</th>
+                          <th>항목</th>
+                          <th>보고내용</th>
+                          <th>지정부서</th>
+                          <th>작성일자</th>
+                          <th>보고일자</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>4</td>
+                          <td>시민생활 정보 안내</td>
+                          <td class="cont_ellipsis">주민자치위원 중 유관기관장 임기 규정 개선 주민자치위원 중 유관기관장 임기 규정 개선</td>
+                          <td>도시계획과</td>
+                          <td>2025-06-24</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>지역현안 및 조치사항</td>
+                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+                          <td>문화관광과</td>
+                          <td>2025-06-24</td>
+                          <td>2025-06-24</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>지역현안 및 조치사항</td>
+                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+                          <td>문화관광과</td>
+                          <td>2025-06-24</td>
+                          <td>2025-06-24</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>지역현안 및 조치사항</td>
+                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+                          <td>문화관광과</td>
+                          <td>2025-06-24</td>
+                          <td>2025-06-24</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="board_paging_row">
+                  <a href="javascript:;" class="btn_paging_control first"></a>
+                  <a href="javascript:;" class="btn_paging_control prev"></a>
+                  <ul class="paging_num_list">
+                    <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                  </ul>
+                  <a href="javascript:;" class="btn_paging_control next"></a>
+                  <a href="javascript:;" class="btn_paging_control last"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+    </div>
+  </body>
+</html>
