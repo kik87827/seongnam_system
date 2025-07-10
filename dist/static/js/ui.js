@@ -412,7 +412,7 @@ function datePickEvt() {
       dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
       dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
       weekHeader: "주",
-      dateFormat: "yy.mm.dd", // 날짜형태 예)yy년 m월 d일
+      dateFormat: "yy-mm-dd", // 날짜형태 예)yy년 m월 d일
       firstDay: 0,
       isRTL: false,
       showMonthAfterYear: true,
