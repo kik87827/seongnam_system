@@ -3485,7 +3485,7 @@ input[type="text"].fr_input_txt {
   color: #000;
   border: 1px solid #dedede;
   border-radius: 100px;
-  padding: 0 20px;
+  padding: 0 15px;
   box-sizing: border-box;
   background-color: #fff; }
   input[type="text"].fr_input_txt.datepicker {
@@ -3908,6 +3908,7 @@ input[type="text"].fr_input_txt {
 .popup_wrap#reportPopup .popup_item.pad3020 {
   padding: 30px 20px; }
 
+/* checkbox */
 .props_item_list {
   display: flex;
   gap: 10px 36px;
@@ -3915,43 +3916,30 @@ input[type="text"].fr_input_txt {
   .props_item_list.gap_type2 {
     gap: 36px; }
 
-.props_item {
-  display: flex;
-  gap: 4px; }
-
 input.props_dom {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  width: 17px;
-  height: 17px;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: 0 0;
-  background-image: url("../images/ico_checkbox_22.png");
-  border: 1px solid #DBDBDB;
-  border-radius: 4px;
-  box-sizing: content-box; }
-  input.props_dom[type="radio"] {
-    border-radius: 100%;
-    background-image: url("../images/ico_radio.png"); }
-    input.props_dom[type="radio"]:checked {
-      border-color: #4285F4; }
+  display: none; }
+  input.props_dom:checked + label {
+    background-position: 0 100%; }
+  input.props_dom + label {
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-image: url("../images/ico_checkbox_22.png");
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: content-box; }
   input.props_dom::-ms-expand {
     display: none; }
-  input.props_dom:checked {
-    background-position: 0 100%; }
-
-.props_label {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.3;
-  color: #000;
-  display: inline-block;
-  padding-top: 2px;
-  cursor: pointer; }
+  input.props_dom:disabled + label {
+    opacity: 0.5;
+    border-color: #9e9e9e;
+    background-color: #dedede; }
 
 /* datepicker */
 .ui-widget-header {
