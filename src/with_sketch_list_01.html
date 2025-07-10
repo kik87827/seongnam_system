@@ -60,7 +60,7 @@
                       <td>
                         <div class="sort_date_wrap">
                           <div class="sort_date_item">
-                            <input type="text" class="datepicker inp" readonly />
+                            <input type="text" class="fr_input_txt datepicker inp" readonly />
                           </div>
                           <span class="date_flow">~</span>
                           <div class="sort_date_item">
@@ -95,12 +95,21 @@
                   <div class="list_table_wrap">
                     <table class="list_table type2">
                       <caption>조회 결과</caption>
+                      <colgroup>
+                        <col style="width: 5%" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
                       <thead>
                         <tr>
                           <th class="has_total_dom">
                             <div class="props_item">
                               <input type="checkbox" class="props_dom" id="list_total_chk" />
-                              <label for="list_total_chk" class="props_label hdtext">전체 선택</label>
+                              <label for="list_total_chk" class="props_label"></label>
                             </div>
                           </th>
                           <th>순번</th>
@@ -113,38 +122,50 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="has_form"><input type="checkbox" class="props_dom" /></td>
+                          <td class="has_form">
+                            <input type="checkbox" class="props_dom" id="list_chk_01" />
+                            <label for="list_chk_01" class="props_label"></label>
+                          </td>
                           <td>4</td>
                           <td>시민생활 정보 안내</td>
-                          <td class="cont_ellipsis">주민자치위원 중 유관기관장 임기 규정 개선 주민자치위원 중 유관기관장 임기 규정 개선</td>
+                          <td class="cont_ellipsis">주민자치위원 중 유관기관장 임기 규정 개선...</td>
                           <td>도시계획과</td>
                           <td>2025-06-24</td>
                           <td></td>
                         </tr>
                         <tr>
-                          <td class="has_form"><input type="checkbox" class="props_dom" disabled /></td>
+                          <td class="has_form">
+                            <input type="checkbox" class="props_dom" id="list_chk_02" disabled />
+                            <label for="list_chk_02" class="props_label"></label>
+                          </td>
                           <td>3</td>
                           <td>지역현안 및 조치사항</td>
-                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
+                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가...</td>
                           <td>문화관광과</td>
                           <td>2025-06-24</td>
                           <td>2025-06-24</td>
                         </tr>
                         <tr>
-                          <td class="has_form"><input type="checkbox" class="props_dom" disabled /></td>
+                          <td class="has_form">
+                            <input type="checkbox" class="props_dom" id="list_chk_03" disabled />
+                            <label for="list_chk_03" class="props_label"></label>
+                          </td>
                           <td>2</td>
-                          <td>지역현안 및 조치사항</td>
-                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
-                          <td>문화관광과</td>
+                          <td>시책사업에 대한 제언</td>
+                          <td class="cont_ellipsis">성남시 주민자치센터 설치 및 운영조례에 따르면, 위원의...</td>
+                          <td>지역경제상권과</td>
                           <td>2025-06-24</td>
                           <td>2025-06-24</td>
                         </tr>
                         <tr>
-                          <td class="has_form"><input type="checkbox" class="props_dom" disabled /></td>
+                          <td class="has_form">
+                            <input type="checkbox" class="props_dom" id="list_chk_04" disabled />
+                            <label for="list_chk_04" class="props_label"></label>
+                          </td>
                           <td>1</td>
-                          <td>지역현안 및 조치사항</td>
-                          <td class="cont_ellipsis">기존 주민자치위원으로 활동하던 유관기관장이 임기가 기존 주민자치위원으로 활동하던 유관기관장이 임기가</td>
-                          <td>문화관광과</td>
+                          <td>시민생활 정보 안내</td>
+                          <td class="cont_ellipsis">유관기관 간의 긴밀한 협조가 필요한 동 행정의 특성을...</td>
+                          <td>스마트도시과</td>
                           <td>2025-06-24</td>
                           <td>2025-06-24</td>
                         </tr>

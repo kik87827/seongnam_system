@@ -6,6 +6,7 @@ $(function () {
 $(window).on("load",function(){
   footerFunc();
   datePickEvt();
+  fileUpload();
 });
 
 function commonInit() {
@@ -407,7 +408,7 @@ function datePickEvt() {
       dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
       dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
       weekHeader: "주",
-      dateFormat: "yy.mm.dd", // 날짜형태 예)yy년 m월 d일
+      dateFormat: "yy-mm-dd", // 날짜형태 예)yy년 m월 d일
       firstDay: 0,
       isRTL: false,
       showMonthAfterYear: true,
@@ -417,5 +418,14 @@ function datePickEvt() {
     $(".datepicker").datepicker({
       minDate: 0,
     });
+  });
+}
+
+function fileUpload() {
+  $(function(){
+    $("#file_upload").on("change", function () {
+        var fileName = $("#file_upload").val();
+        $(".sort_file_txt").html(fileName);
+      });
   });
 }

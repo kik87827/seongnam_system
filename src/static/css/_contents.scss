@@ -27,7 +27,10 @@
 .sort_tb_wrap {
     margin-bottom: 30px; border-top: 1px solid #a50082;
     table {width: 100%; table-layout: fixed; margin-bottom: 20px;}
-    tr {height: 54px; border-bottom: 1px solid #dedede;}
+    tr {
+        height: 54px; border-bottom: 1px solid #dedede;
+        &.sort_divi_line {border-bottom: 1px solid rgba(119,1,94,0.3);}
+    }
     th {@include font(15px,400,normal,#8b1c74); background-color: rgba(165,0,130,0.1); @include Paperlogy;}
     td {text-align: left;}
     th, td {padding: 10px; box-sizing: border-box;}
@@ -38,20 +41,54 @@
             &:read-only {background-color: #fff;}
         }
     }
-    .sort_tb_select {width: 110px;}
-    .sort_date_wrap {float: left;}
-    .adm_btn.sort_btn {margin-left: 10px;}
-}
-input[type="text"].fr_input_txt {
-    width: 110px; height: 35px; @include font(14px,400,normal,#000); border: 1px solid #dedede; border-radius: 100px; padding: 0 20px; box-sizing: border-box; background-color: #fff;
-    &.datepicker {
-        appearance: none; -ms-appearance: none; background-position: top 50% right 12px; background-repeat:no-repeat; background-size:17px auto; background-image: url(../images/ico_calendar_17.png);
-        &:read-only {background-color: #fff;}
+    .sort_tb_select {
+        width: 110px;
+        &.w195 {width: 195px;}
     }
-    &.type2 {width: 100% !important; letter-spacing: 0; background-color: rgba(222,222,222,0.3); color: #000;}
+    .sort_date_wrap {float: left;}
+    .adm_btn.sort_btn {
+        margin-left: 10px;
+        &.sort_file_label {margin-left: 0;}
+    }
+}
+.view_area {width: 100%; padding: 0 10px; @include font(16px,400,1.8,#000);}
+input[type="text"].fr_input_txt {
+    width: 110px; height: 35px; @include font(14px,400,normal,#000); border: 1px solid #dedede; border-radius: 100px; padding: 0 15px; box-sizing: border-box; background-color: #fff;
+    &.datepicker {
+        letter-spacing: -0.03em; appearance: none; -ms-appearance: none; background-position: top 50% right 12px; background-repeat:no-repeat; background-size:17px auto; background-image: url(../images/ico_calendar_17.png);
+        &:read-only {background-color: #fff;}
+        &.gray {
+            width: 140px !important; background-color: rgba(222,222,222,0.3); color: #000;
+            &:read-only {background-color: rgba(222,222,222,0.3);}
+            &::placeholder {color: #000;}
+        }
+    }
+    &.type2 {
+        width: 100% !important; letter-spacing: 0; background-color: rgba(222,222,222,0.3); color: #000;
+        &::placeholder {color: #000;}
+    }
+    &.type3 {
+        letter-spacing: 0; background-color: rgba(222,222,222,0.3); color: #000;
+        &::placeholder {color: #000;}
+    }
     &.type_wd {width: 240px !important;}
     &.w100per {width: 100% !important; letter-spacing: 0;}
+    &.w140 {width: 140px !important;}
+    &.w195 {width: 195px !important;}
     &.bg_gray {background-color: rgba(222,222,222,0.3);}
+}
+.sort_select_wrap {
+    width: 100%;
+    > select {display: inline-block; max-width: 195px; margin-right: 20px !important;}
+    &::after {content: ''; display: block; clear: both;}
+}
+.sort_select_noti {display: inline-block; @include font(14px,400,normal,#000);}
+.sort_td_item {
+    display: inline-block; margin-right: 20px;
+    .sort_td_txt,
+    .sort_td_ct {display: inline-block; margin-right: 10px; @include font(14px,500,normal,#000);}
+    .sort_td_ct {margin-left: 10px;}
+    input {display: inline-block;}
 }
 
 /* 날짜 검색 */
@@ -67,6 +104,15 @@ input[type="text"].fr_input_txt {
     }
 }
 .date_flow {float: left; display: inline-block; margin: 0 6px; @include font(14px,500,35px,#000);}
+.sort_textarea {
+    width: 100%; height: 205px; padding: 15px; @include font(14px,400,normal,#000);border: 1px solid #dedede; border-radius: 17px; box-sizing: border-box; background-color: #fff; outline: none; resize: none;
+    &.ht_half {height: 145px;}
+}
+.sort_file_label {
+    position: relative; display: inline-block; font-size: 16px; color: #353535; @include Paperlogy;
+}
+.sort_file_btn {position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; border: 0; opacity: 0; appearance: none; outline: none; cursor: pointer;}
+.sort_file_txt {display: inline-block;}
 
 /* board layout */
 .board_container{}
@@ -77,7 +123,10 @@ input[type="text"].fr_input_txt {
     .fraction_cols{float: left;}
     .search_cols{
         float: right;
-        .form_select{min-width:120px;}
+        .form_select{
+            min-width:120px;
+            &.w195 {width: 195px;}
+        }
     }
     &.type2{background:none;padding:0;}
 }
@@ -158,7 +207,7 @@ input[type="text"].fr_input_txt {
     }
     tbody{
         tr {
-            &:nth-child(even) td {background-color: rgba(215,215,215,0.1);}
+            &:nth-child(even) td {background-color: rgba(215,215,215,0.1);}            
         }
         td {
             border-bottom:1px solid #d7d7d7; padding:17px; @include font(15px,300,normal,#000);
@@ -211,8 +260,10 @@ input[type="text"].fr_input_txt {
     }
     .btn_float_right {
         float: right;
-        > button:first-child {float: left; margin-right: 10px;}
-        > button:last-child {float: right;}
+        > button {
+            &:not(:last-child) {float: left; margin-right: 10px;}
+            &:last-child {float: left; }
+        }
     }
 }
 .btn_right_wrap {text-align: right;}
@@ -233,6 +284,7 @@ input[type="text"].fr_input_txt {
     .popup_item.pad3020 {padding: 30px 20px;}
 }
 
+/* checkbox */
 .props_item_wrap{}
 .props_item_list{
     display:flex; gap:10px 36px; gap:24px;
@@ -241,27 +293,16 @@ input[type="text"].fr_input_txt {
         &:last-of-type{}
     }
 }
-.props_item{
-    display:flex; gap:4px;
-    &.sm{
-
-    }
-}
 input.props_dom{
-    appearance: none; background-color:#fff; width:17px; height:17px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
-    &[type="radio"]{border-radius:100%; background-image:url("../images/ico_radio.png");
-        &:checked{border-color:#4285F4;}
-    }
+    display: none;
+    // appearance: none; background-color:#fff; width:17px; height:17px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
+    // &[type="radio"]{border-radius:100%; background-image:url("../images/ico_radio.png");
+    //     &:checked{border-color:#4285F4;}
+    &:checked + label {background-position:0 100%;}    
+    & + label {position: relative; display:inline-block; width:17px; height:17px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; background-color:#fff; box-sizing:content-box;}
     &::-ms-expand {display: none;}
-    &:checked{background-position:0 100%;}
-    &.sm{
-        
-    }
-}
-.props_label{@include font(14px, 400, 1.3, #000); display:inline-block; padding-top:2px; cursor:pointer;
-    &.sm{
-        
-    }
+    // .props_label{@include font(14px, 400, 1.3, #000); display:inline-block; padding-top:2px; cursor:pointer;}
+    &:disabled + label {opacity: 0.5; border-color: #9e9e9e; background-color: #dedede;}
 }
 
 /* datepicker */
