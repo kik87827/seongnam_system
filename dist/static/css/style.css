@@ -3454,7 +3454,8 @@ a.ui-button:active,
     letter-spacing: -0.04em;
     border: 1px solid #dedede;
     border-radius: 100px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    background-color: #fff; }
     .sort_tb_wrap input[type="text"].datepicker {
       -webkit-appearance: none;
          -moz-appearance: none;
@@ -3475,7 +3476,7 @@ a.ui-button:active,
   .sort_tb_wrap .adm_btn.sort_btn {
     margin-left: 10px; }
 
-.btn_txt_input {
+input[type="text"].fr_input_txt {
   width: 110px;
   height: 35px;
   font-size: 14px;
@@ -3484,8 +3485,10 @@ a.ui-button:active,
   color: #000;
   border: 1px solid #dedede;
   border-radius: 100px;
-  box-sizing: border-box; }
-  .btn_txt_input.datepicker {
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #fff; }
+  input[type="text"].fr_input_txt.datepicker {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -3494,15 +3497,22 @@ a.ui-button:active,
     background-repeat: no-repeat;
     background-size: 17px auto;
     background-image: url(../images/ico_calendar_17.png); }
-    .btn_txt_input.datepicker:-moz-read-only {
+    input[type="text"].fr_input_txt.datepicker:-moz-read-only {
       background-color: #fff; }
-    .btn_txt_input.datepicker:read-only {
+    input[type="text"].fr_input_txt.datepicker:read-only {
       background-color: #fff; }
-  .btn_txt_input.type_wd {
+  input[type="text"].fr_input_txt.type2 {
+    width: 100% !important;
+    letter-spacing: 0;
+    background-color: rgba(222, 222, 222, 0.3);
+    color: #000; }
+  input[type="text"].fr_input_txt.type_wd {
     width: 240px !important; }
-  .btn_txt_input.w100per {
+  input[type="text"].fr_input_txt.w100per {
     width: 100% !important;
     letter-spacing: 0; }
+  input[type="text"].fr_input_txt.bg_gray {
+    background-color: rgba(222, 222, 222, 0.3); }
 
 /* 날짜 검색 */
 .sort_date_wrap::after {
@@ -4035,7 +4045,7 @@ input.props_dom {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #0258AD; }
+    background-color: #77015e; }
 
 .ui-datepicker-calendar > tbody > tr > .ui-state-disabled:hover {
   cursor: auto;
