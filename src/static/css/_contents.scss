@@ -35,7 +35,7 @@
     td {text-align: left;}
     th, td {padding: 10px; box-sizing: border-box;}
     input[type="text"] {
-        width: 110px; height: 35px; @include font(14px,400,normal,#000); letter-spacing: -0.04em; border: 1px solid #dedede; border-radius: 100px; box-sizing: border-box; background-color: #fff;
+        width: 120px; height: 35px; @include font(14px,400,normal,#000); letter-spacing: -0.04em; border: 1px solid #dedede; border-radius: 100px; box-sizing: border-box; background-color: #fff;
         &.datepicker {
             appearance: none; -ms-appearance: none; background-position: top 50% right 12px; background-repeat:no-repeat; background-size:17px auto; background-image: url(../images/ico_calendar_17.png);
             &:read-only {background-color: #fff;}
