@@ -2,7 +2,7 @@
 /* 분류 검색 */
 .sub_cont_tit {@include font(18px,500,normal,#77015e); @include Paperlogy; margin-bottom: 17px;}
 .sort_col_wrap {
-  @include Paperlogy; padding: 0 19px 0 29px; margin-bottom: 30px; background-color: rgba(215,215,215,0.3); border-radius: 10px;
+  @include Paperlogy; height: 54px; padding: 0 19px 0 29px; margin-bottom: 30px; background-color: rgba(215,215,215,0.3); border-radius: 10px;
   &::after {content: ''; display: block; clear: both;}
 }
 .sort_col_item {float: left; line-height: 54px;}
@@ -45,6 +45,7 @@
         width: 110px;
         &.w195 {width: 195px;}
     }
+    .sort_date_wrap {float: left;}
     .adm_btn.sort_btn {
         margin-left: 10px;
         &.sort_file_label {margin-left: 0;}
@@ -52,7 +53,7 @@
 }
 .view_area {width: 100%; padding: 0 10px; @include font(16px,400,1.8,#000);}
 input[type="text"].fr_input_txt {
-    width: 120px; height: 35px; @include font(14px,400,normal,#000); border: 1px solid #dedede; border-radius: 100px; padding: 0 15px; box-sizing: border-box; background-color: #fff;
+    width: 110px; height: 35px; @include font(14px,400,normal,#000); border: 1px solid #dedede; border-radius: 100px; padding: 0 15px; box-sizing: border-box; background-color: #fff;
     &.datepicker {
         letter-spacing: -0.03em; appearance: none; -ms-appearance: none; background-position: top 50% right 12px; background-repeat:no-repeat; background-size:17px auto; background-image: url(../images/ico_calendar_17.png);
         &:read-only {background-color: #fff;}
@@ -70,7 +71,7 @@ input[type="text"].fr_input_txt {
         letter-spacing: 0; background-color: rgba(222,222,222,0.3); color: #000;
         &::placeholder {color: #000;}
     }
-    &.type_wd {width: 260px !important;}
+    &.type_wd {width: 240px !important;}
     &.w100per {width: 100% !important; letter-spacing: 0;}
     &.w140 {width: 140px !important;}
     &.w195 {width: 195px !important;}
@@ -86,11 +87,23 @@ input[type="text"].fr_input_txt {
     display: inline-block; margin-right: 20px;
     .sort_td_txt,
     .sort_td_ct {display: inline-block; margin-right: 10px; @include font(14px,500,normal,#000);}
+    .sort_td_ct {margin-left: 10px;}
     input {display: inline-block;}
 }
 
 /* 날짜 검색 */
-.date_flow {display: inline-block; margin: 0 6px; @include font(14px,500,35px,#000);}
+.sort_date_wrap {
+    &::after {content: ''; display: block; clear: both;}
+}
+.sort_date_item {
+    position: relative; display: inline-block; float: left;
+    &:after {background-image: url("../images/ico_calendar_17.png"); @include bgicon_center(16px auto); pointer-events: none;}
+    input {
+        @include font(16px,400,1.5,#000); cursor: pointer;
+        &::placeholder {color: #aaa;}
+    }
+}
+.date_flow {float: left; display: inline-block; margin: 0 6px; @include font(14px,500,35px,#000);}
 .sort_textarea {
     width: 100%; height: 205px; padding: 15px; @include font(14px,400,normal,#000);border: 1px solid #dedede; border-radius: 17px; box-sizing: border-box; background-color: #fff; outline: none; resize: none;
     &.ht_half {height: 145px;}
@@ -187,9 +200,8 @@ input[type="text"].fr_input_txt {
     }
     thead{
         th{
-            border-top:1px solid #000; border-bottom:1px solid #d7d7d7; padding:16px; background-color: rgba(215,215,215,0.2); @include font(15px,400,normal,#000); @include Paperlogy;
-            &:first-child {padding-left: 32px;}
-            &:last-child {padding-right: 32px;}
+            border-top:1px solid #000; border-bottom:1px solid #d7d7d7; padding:17px; background-color: rgba(215,215,215,0.2); @include font(15px,400,normal,#000); @include Paperlogy;
+            &:first-child {padding: 17px 17px 17px 34px;}
             &.mb_none{}
         }
     }
@@ -199,10 +211,10 @@ input[type="text"].fr_input_txt {
         }
         td {
             border-bottom:1px solid #d7d7d7; padding:17px; @include font(15px,300,normal,#000);
-            &:first-child {padding-left: 32px;}
-            &:last-child {padding-right: 32px;}
+            &:first-child {padding-left: 34px;}
+            &:last-child {padding-right: 34px;}
             &.mb_none{}
-            &.define_title{text-align: left; padding: 16px;}
+            &.define_title{text-align: left; padding-left:16px; padding-right:16px;}
             &.nodata_td{padding-top:100px; padding-bottom:100px;}
         }
     }
@@ -345,56 +357,7 @@ input.props_dom{
 .inp {padding:10px 10px; background-color:#f1f1f1; border-radius:4px; border:0px;}
 .inp:focus {outline:none; background-color:#eee;}
 
-
-@media (max-width: 1485px) {
-    input[type="text"].fr_input_txt {
-        width: 110px; font-size: 12px; padding: 0 15px;
-        &.type_wd {width: 240px !important;}
-    }
-    .sort_td_item {
-        margin-right: 5px;
-        .sort_td_ct {margin: 0 3px;}
-    }
-}
-
-@media (max-width: 1420px) {
-    .sort_tb_wrap {
-        th {font-size: 14px;}       
-        .adm_btn.sort_btn {margin-left: 0;} 
-    }
-    .fr_input_txt,
-    .date_flow {margin: 5px 0;}
-    .adm_btn.sort_btn {margin: 5px 0;}
-    .form_select {margin-top: 5px; margin-bottom: 5px;}
-    .list_table {
-        thead {
-            th {
-                font-size: 14px; padding: 10px 5px;
-                &:first-child {padding-left: 10px;}
-                &:last-child {padding-right: 10px;}
-            }
-        }
-        tbody {
-            td {
-                font-size: 14px; padding: 10px 5px;
-                &:first-child {padding-left: 10px;}
-                &:last-child {padding-right: 10px;}
-            }
-        }
-    }
-    .sort_td_item {
-        margin-right: 10px;
-        .sort_td_txt,
-        .sort_td_ct {margin-right: 0px;}
-    }
-}
-
-@media (max-width: 1280px) {
-    .btn_right_wrap {text-align: left;}
-    .btn_float_wrap  {
-        .btn_float_right {float: left;}
-    }
-    input[type="text"].fr_input_txt {
-        &.type2 {max-width: 200px;}
-    }
-}
+/* IE10+ */
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//     /* 이곳에 CSS 작성 */
+// }
