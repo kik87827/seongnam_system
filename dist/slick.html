@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>배너 슬라이더</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 30px;
+        background: #f8e9f4;
+        font-family: "sans-serif";
+        text-align: center;
+      }
+
+      .banner-slider {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .slide img {
+        width: 100%;
+        display: block;
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+        font-size: 16px;
+      }
+
+      .slider-controls .counter {
+        background: #e0e0e0;
+        padding: 4px 12px;
+        border-radius: 20px;
+        min-width: 50px;
+      }
+
+      .slider-controls button {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 4px 8px;
+      }
+
+      .slider-controls button:hover {
+        background: #ddd;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 배너 슬라이더 -->
+    <div class="banner-slider">
+      <div class="slide"><img src="./static/images/banner_img_330_01.png" alt="배너1" /></div>
+      <div class="slide"><img src="./static/images/banner_img_330_02.png" alt="배너2" /></div>
+      <div class="slide"><img src="./static/images/banner_img_330_03.png" alt="배너3" /></div>
+      <div class="slide"><img src="./static/images/banner_img_330_04.png" alt="배너4" /></div>
+      <div class="slide"><img src="./static/images/banner_img_330_05.png" alt="배너5" /></div>
+    </div>
+
+    <!-- 커스텀 컨트롤 -->
+    <div class="slider-controls">
+      <div class="counter">
+        <span class="current">1</span>
+        /
+        <span class="total">5</span>
+      </div>
+      <button class="prev">〈</button>
+      <button class="pause">⏸</button>
+      <button class="next">〉</button>
+      <button class="fullscreen">◎</button>
+    </div>
+
+    <!-- jQuery & Slick JS -->
+    <script src="./static/js/jquery-1.12.4.min.js"></script>
+    <script src="./static/js/slick.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const $slider = $(".banner-slider");
+
+        $slider.slick({
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          pauseOnHover: false,
+        });
+
+        // 총 슬라이드 수 표시
+        const total = $slider.slick("getSlick").slideCount;
+        $(".slider-controls .total").text(total);
+
+        // 현재 슬라이드 업데이트
+        $slider.on("afterChange", function (event, slick, currentSlide) {
+          $(".slider-controls .current").text(currentSlide + 1);
+        });
+
+        // 컨트롤 버튼
+        $(".prev").on("click", () => $slider.slick("slickPrev"));
+        $(".next").on("click", () => $slider.slick("slickNext"));
+
+        let isPaused = false;
+        $(".pause").on("click", function () {
+          if (isPaused) {
+            $slider.slick("slickPlay");
+            $(this).text("⏸");
+          } else {
+            $slider.slick("slickPause");
+            $(this).text("▶");
+          }
+          isPaused = !isPaused;
+        });
+
+        $(".fullscreen").on("click", function () {
+          alert("전체보기 기능은 추가 구현 필요");
+        });
+      });
+    </script>
+  </body>
+</html>

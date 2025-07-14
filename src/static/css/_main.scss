@@ -1,1 +1,111 @@
 /* main */
+.middle_wrap{
+    &.main{}
+}
+.mv_zone{}
+.mv_inner{}
+.mv_cols{
+    &.pillar_01{}
+    &.pillar_02{}
+    &.pillar_03{}
+    &.pillar_04{}
+}
+.mv_pillar_block{}
+.mv_pillar_title_row{}
+.mv_pillar_title{}
+.mv_pillar_contents{}
+.current_tube_list{
+    > li{}
+}
+.current_tube_item{
+}
+.tube_td{
+    &.define_key{}
+    &.define_value{}
+}
+.tube_keyword{}
+.tube_value{
+    .emp{}
+}
+.current_tube_item{}
+.mv_quadcard_wrap{
+
+}
+.mv_quadcard_list{
+    > li{}
+}
+.mv_quadcard{}
+.quadcard_count_row{}
+.quadcard_count{}
+.quadcard_label{}
+.quadcard_label_row{}
+.mv_quadlocal_layer{
+    .title_row{}
+    .quadlocal_title{}
+    .contents_row{}
+}
+.obj_table_list{
+     > li{
+        &:last-of-type{}
+        .obj_cols{
+            &.define_th{}
+            &.define_td{}
+        }
+     }
+    .number_package{
+    .number_main{}
+    .number_unit{}
+}
+}
+.obj_keylabel{
+    &.emp_red{}
+}
+.number_package{
+    .number_main{}
+    .number_unit{}
+}
+.btn_quadlocal_close{}
+.mv_gobox_wrap{}
+.mv_gobox_list{
+    > li{}
+}
+.mv_gobox_item{
+    .ico_img_row{
+        img{}
+    }
+    .text_node_row{}
+    .text_node{}
+}
+.mv_gobox_td{}
+.mv_gobox_wrap{}
+
+.banner_container{}
+.banner_slider{
+    > li{}
+    &:after{}
+}
+.banner_img_item{
+    > img{}
+}
+.banner_control_row{
+    .counter_obj{
+        .current{}
+        .part{}
+        .total{}
+    }
+    .navigation_obj{
+    }
+    .btn_control{
+        &.prev{}
+        &.next{}
+        &.stop{}
+        &.auto{}
+    }
+    .btn_total_list{}
+}
+.banner_control_item_list{
+    > li{}
+}
+
+
+.mc_zone{}
