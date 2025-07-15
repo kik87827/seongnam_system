@@ -46,6 +46,7 @@
     display:table-cell; vertical-align: middle;
     &.define_sort{}
     &.define_long{}
+    select.search_util_select{background-color:transparent}
 }
 
 select.search_util_select{width:100%;color:#000;border:0;font-size:14px;height: 35px;padding: 0 32px 0 18px;box-sizing:border-box;font-family: "Pretendard"; min-width:96px; cursor: pointer;
@@ -165,6 +166,8 @@ select.header_total_select:disabled{background-color:#f7f7f7;color:#999999;;opac
     position:absolute;top:3.5px; right:13px;
     &.shape_2{background-image:url("../images/ico_weather_02.png");}
 }
+
+.middle_wrap{position:relative;z-index:5;}
 
 
 .footer_wrap{background:#f3f3f3; padding-bottom:50px;}
