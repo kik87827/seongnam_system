@@ -188,20 +188,28 @@
         .part{padding:0 2px;}
         .total{}
     }
-    .navigation_obj{
-        .btn_control{margin-right:7px;
-            &:last-of-type{margin-right:0;}
+    .btn_total_list{background-image:url("../images/ico_menu_burger_20.png");}
+}
+.navigation_obj{
+    &.skin2{
+        .btn_control,.btn_total_list{
+            &.prev{background-image:url("../images/ico_control_prev_w_20.png");}
+            &.next{background-image:url("../images/ico_control_next_w_20.png");}
+            &.pause,
+            &.auto{background-image:url("../images/ico_control_pp_w_20.png");}
         }
     }
-    .btn_control,.btn_total_list{
-        display:inline-block;width:20px;height:20px;@include bgicon; vertical-align:middle;
-        &.prev{background-image:url("../images/ico_control_prev_20.png");}
-        &.next{background-image:url("../images/ico_control_next_20.png");}
-        &.pause,
-        &.auto{background-image:url("../images/ico_control_pp_20.png");}
-        &.auto{background-position:0 100%; display:none;}
+    .btn_control{margin-right:7px;
+        &:last-of-type{margin-right:0;}
     }
-    .btn_total_list{background-image:url("../images/ico_menu_burger_20.png");}
+}
+.btn_control,.btn_total_list{
+    display:inline-block;width:20px;height:20px;@include bgicon; vertical-align:middle;
+    &.prev{background-image:url("../images/ico_control_prev_20.png");}
+    &.next{background-image:url("../images/ico_control_next_20.png");}
+    &.pause,
+    &.auto{background-image:url("../images/ico_control_pp_20.png");}
+    &.auto{background-position:0 100%; display:none;}
 }
 .banner_control_item_list{
     display:table; float:right; min-height:37px;
@@ -227,3 +235,45 @@
 }
 
 .mc_zone{}
+.mc_row{
+    &.mc_01{}
+    &.mc_02{}
+    &.mc_03{}
+    &.mc_04{}
+}
+.mc_row_tb{
+    .binding_cols{}
+    .banner_big_cols{}
+    .banner_sm_cols{}
+}
+.binding_card{
+    .top_row{}
+    .top_title_tb{}
+    .top_title_td{
+        .main_cols{}
+        .sub_cols{}
+    }
+    .binding_title{
+        .text_node{}
+    }
+    .binding_title_sub{}
+    .middle_row{}
+}
+.binding_data_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.binding_data_item{}
+.binding_data_link{}
+.binding_data_sub{}
+.single_banner_container{
+    .banner_slider{}
+    .banner_slider{}
+    .banner_slider{}
+    .banner_slider{}
+}
+.single_banner_link{
+    > img{}
+}
+.navigation_obj_layer{}
