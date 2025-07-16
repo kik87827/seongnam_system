@@ -4637,29 +4637,40 @@ input.props_dom {
       display: inline-block; }
     .banner_control_row .counter_obj .part {
       padding: 0 2px; }
-  .banner_control_row .navigation_obj .btn_control {
-    margin-right: 7px; }
-    .banner_control_row .navigation_obj .btn_control:last-of-type {
-      margin-right: 0; }
-  .banner_control_row .btn_control, .banner_control_row .btn_total_list {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: 0 0;
-    vertical-align: middle; }
-    .banner_control_row .btn_control.prev, .banner_control_row .btn_total_list.prev {
-      background-image: url("../images/ico_control_prev_20.png"); }
-    .banner_control_row .btn_control.next, .banner_control_row .btn_total_list.next {
-      background-image: url("../images/ico_control_next_20.png"); }
-    .banner_control_row .btn_control.pause, .banner_control_row .btn_control.auto, .banner_control_row .btn_total_list.pause, .banner_control_row .btn_total_list.auto {
-      background-image: url("../images/ico_control_pp_20.png"); }
-    .banner_control_row .btn_control.auto, .banner_control_row .btn_total_list.auto {
-      background-position: 0 100%;
-      display: none; }
   .banner_control_row .btn_total_list {
     background-image: url("../images/ico_menu_burger_20.png"); }
+
+.navigation_obj.skin2 .btn_control.prev, .navigation_obj.skin2 .btn_total_list.prev {
+  background-image: url("../images/ico_control_prev_w_20.png"); }
+
+.navigation_obj.skin2 .btn_control.next, .navigation_obj.skin2 .btn_total_list.next {
+  background-image: url("../images/ico_control_next_w_20.png"); }
+
+.navigation_obj.skin2 .btn_control.pause, .navigation_obj.skin2 .btn_control.auto, .navigation_obj.skin2 .btn_total_list.pause, .navigation_obj.skin2 .btn_total_list.auto {
+  background-image: url("../images/ico_control_pp_w_20.png"); }
+
+.navigation_obj .btn_control {
+  margin-right: 7px; }
+  .navigation_obj .btn_control:last-of-type {
+    margin-right: 0; }
+
+.btn_control, .btn_total_list {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  vertical-align: middle; }
+  .btn_control.prev, .btn_total_list.prev {
+    background-image: url("../images/ico_control_prev_20.png"); }
+  .btn_control.next, .btn_total_list.next {
+    background-image: url("../images/ico_control_next_20.png"); }
+  .btn_control.pause, .btn_control.auto, .btn_total_list.pause, .btn_total_list.auto {
+    background-image: url("../images/ico_control_pp_20.png"); }
+  .btn_control.auto, .btn_total_list.auto {
+    background-position: 0 100%;
+    display: none; }
 
 .banner_control_item_list {
   display: table;
