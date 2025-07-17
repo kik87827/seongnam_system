@@ -894,7 +894,7 @@ select.header_total_select:disabled {
     max-width: 100%; }
 
 .sub_middle_wrap {
-  padding: 45px; }
+  padding: 30px 10px 47px 10px; }
 
 .middle_template {
   display: table;
