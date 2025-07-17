@@ -13,6 +13,10 @@
     }
     .text_node{@include font(16px,400,1,#fff); @include Paperlogy; white-space:nowrap; display:inline-block;}
 }
+.btn_icon_only{
+    width:16px;height:16px;@include bgicon; display:inline-block;
+    &.setting{background-image:url("../images/ico_setting_16.png");}
+}
 
 /* slick */
 .slick_control_list{
