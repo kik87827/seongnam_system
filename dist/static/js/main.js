@@ -34,9 +34,9 @@ function localLayer() {
     var $this = $(this);
     var $thisZone = $this.closest(".banner_global_zone");
     var $thisLayer = $thisZone.find(".mv_quadlocal_layer");
-    console.log($thisLayer);
     $(".mv_quadlocal_layer").not($thisLayer).hide();
     $thisLayer.toggle();
+    console.log($thisLayer);
   });
   $(".btn_quadlocal_close").on("click", function(e) {
     e.preventDefault();

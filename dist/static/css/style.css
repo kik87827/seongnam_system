@@ -4707,6 +4707,9 @@ input.props_dom {
     left: auto;
     right: 0;
     top: calc(100% + 15px); }
+    .banner_global_zone .mv_quadlocal_layer.pos2 {
+      top: auto;
+      bottom: 38px; }
 
 .banner_slice_title_list > li {
   margin-bottom: 10px; }

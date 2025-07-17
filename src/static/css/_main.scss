@@ -224,7 +224,9 @@
     }
 }
 .banner_global_zone{position:relative;
-    .mv_quadlocal_layer{width:100%; left:auto; right:0; top:calc(100% + 15px)}
+    .mv_quadlocal_layer{width:100%; left:auto; right:0; top:calc(100% + 15px);
+        &.pos2{top:auto;bottom:38px;}
+    }
 }
 .banner_slice_title_list{
     > li{
