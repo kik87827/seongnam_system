@@ -4276,7 +4276,9 @@ input.props_dom {
 
 /* main */
 .mv_zone {
-  background: #e2c6dc; }
+  background: #e2c6dc;
+  position: relative;
+  z-index: 5; }
 
 .mv_inner {
   max-width: 1425px;
@@ -4735,7 +4737,9 @@ input.props_dom {
     left: 0; }
 
 .mc_zone {
-  margin: 30px 0 70px; }
+  margin: 30px 0 70px;
+  position: relative;
+  z-index: 1; }
 
 .mc_row {
   margin-bottom: 25px; }

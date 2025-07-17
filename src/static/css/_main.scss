@@ -2,7 +2,7 @@
 .middle_wrap{
     &.main{}
 }
-.mv_zone{background:#e2c6dc;}
+.mv_zone{background:#e2c6dc;position:relative;z-index:5;}
 .mv_inner{max-width:1425px; margin:0 auto; padding:27px 30px; height:314px; display:table; width:100%;  box-sizing:border-box;}
 .mv_cols{
     display:table-cell;vertical-align:top;
@@ -239,7 +239,7 @@
     &:before{display:block;content:'';width:3px;height:3px; border-radius:100%;background:#000;opacity:.5; position:absolute;top:5px;left:0;}
 }
 
-.mc_zone{margin:30px 0 70px;}
+.mc_zone{margin:30px 0 70px;position:relative;z-index:1;}
 .mc_row{
     margin-bottom:25px;
     &:last-of-type{margin-bottom:0}
