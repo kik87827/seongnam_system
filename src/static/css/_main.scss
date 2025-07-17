@@ -251,7 +251,7 @@
     &.mc_04{}
 }
 .mc_row_tb{
-    display:table;width:100%; margin:0 auto; max-width:1365px;
+    display:table;width:100%; margin:0 auto; max-width:1365px; padding:0 30px;
     .binding_cols,
     .banner_big_cols,
     .binding2_cols,
@@ -271,30 +271,30 @@
     }
     .empty_cols{width:20px;height:50px; }
 }
-.binding_card{border:1px solid #d1d1d1; border-radius:8px; overflow:hidden;}
+.binding_card{border:1px solid #d1d1d1; border-radius:8px; overflow:hidden; position:relative;}
 .data_card_tb{
     display:table;width:100%; table-layout:fixed; height:257px;
     .top_row{display:table-row;}
     .top_cols{display:table-cell;vertical-align:middle;background:#f8f8f8;border-bottom:1px solid #d1d1d1; height:54px;
         &:after{display:block;content:'';clear:both;}
     }
-    .top_title_tb{display:table;padding:16px 20px; float:left;
+    .top_title_tb{display:table;padding:16px 20px; width:100%; box-sizing: border-box;
         .main_cols,
         .sub_cols{display:table-cell;vertical-align:bottom;}
-        .main_cols{}
+        .main_cols{width:1px;}
         .sub_cols{padding-left:20px;}
         .btn_cols{width:16px;}
     }
     .binding_title{
         position:relative;
         &:before{display:block;content:'';width:calc(100% + 20px); position:absolute;bottom:-5px;left:-10px; background:#e0ccdd; border-radius:100px; height:14px;}
-        .text_node{@include font(20px,500,1,#611452); @include Paperlogy; position:relative;}
+        .text_node{@include font(20px,500,1,#611452); @include Paperlogy; position:relative; white-space: nowrap}
     }
-    .binding_title_sub{@include font(14px,400,1.3,#262626);}
+    .binding_title_sub{@include font(14px,400,1.3,#262626); @include ellipsis}
     .middle_row{display:table-row;}
     .middle_cols{display:table-cell;vertical-align:top;}
 }
-.top_title_else_wrap{float:right;padding:20px 22px 0 0;}
+.top_title_else_wrap{position:absolute;top:20px;right:22px;}
 .binding_data_list{
     padding:18px 20px 18px; box-sizing:border-box;  height:199px;
     > li{

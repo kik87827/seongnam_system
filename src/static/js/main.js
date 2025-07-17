@@ -5,14 +5,16 @@ $(function () {
 $(window).on("load",function(){
   maxHeightEach([
     {
-      parent : ".mv_quadcard_list",
-      target : ".mv_quadcard"
+      parent: ".mv_quadcard_list",
+      target: ".mv_quadcard"
     },
     {
-      parent : ".mv_gobox_list",
-      target : ".mv_gobox_item"
+      parent: ".mv_gobox_list",
+      target: ".mv_gobox_item"
     }
-  ])
+  ]);
+
+  mcCardLayout();
 });
 
 function localLayer(){
@@ -55,6 +57,28 @@ function localLayer(){
         $(".mv_quadlocal_layer").hide();
       }
     });
+}
+
+function mcCardLayout() {
+  var $binding_title_sub = $(".binding_title_sub");
+
+  action();
+  $(window).on("resize", function () {
+    action();
+  });
+
+  function action() {
+    if ($binding_title_sub.length === 0) { return; }
+    $binding_title_sub.css("width", "");
+    $binding_title_sub.each(function () {
+      var $this = $(this);
+      var $t_p = $this.closest(".binding_card");
+      var $t_else = $t_p.find(".top_title_else_wrap");
+      var $t_else_width = $t_else.length ? $t_else.outerWidth() : 0;
+
+      $this.css("width", $t_p.outerWidth() - $this.position().left - $t_else_width - 30);
+    });
+  }
 }
 
 function maxHeightEach() {

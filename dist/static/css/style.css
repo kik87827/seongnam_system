@@ -385,6 +385,45 @@ img.ico_img {
   vertical-align: middle;
   height: 80px; }
 
+.sub_header_wrap {
+  background: #5f084d;
+  padding: 0 10px; }
+
+.sub_header_group {
+  display: table;
+  height: 90px; }
+  .sub_header_group .logo_cols,
+  .sub_header_group .util_cols {
+    display: table-cell; }
+  .sub_header_group .logo_cols {
+    vertical-align: middle;
+    width: 240px;
+    padding-right: 30px; }
+  .sub_header_group .util_cols {
+    vertical-align: bottom; }
+
+.sub_toplogo_link {
+  display: inline-block; }
+  .sub_toplogo_link img {
+    vertical-align: middle; }
+
+.util_dom_item {
+  display: table; }
+
+.util_dom_cols {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 12px 0; }
+  .util_dom_cols.ico_cols {
+    padding-right: 10px; }
+    .util_dom_cols.ico_cols .ico > img {
+      vertical-align: middle; }
+  .util_dom_cols.text_cols .text_node {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff; }
+
 .current_util_list {
   display: table; }
   .current_util_list > li {
@@ -4753,7 +4792,8 @@ input.props_dom {
   display: table;
   width: 100%;
   margin: 0 auto;
-  max-width: 1365px; }
+  max-width: 1365px;
+  padding: 0 30px; }
   .mc_row_tb .binding_cols,
   .mc_row_tb .banner_big_cols,
   .mc_row_tb .binding2_cols,
@@ -4784,7 +4824,8 @@ input.props_dom {
 .binding_card {
   border: 1px solid #d1d1d1;
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .data_card_tb {
   display: table;
@@ -4806,11 +4847,14 @@ input.props_dom {
   .data_card_tb .top_title_tb {
     display: table;
     padding: 16px 20px;
-    float: left; }
+    width: 100%;
+    box-sizing: border-box; }
     .data_card_tb .top_title_tb .main_cols,
     .data_card_tb .top_title_tb .sub_cols {
       display: table-cell;
       vertical-align: bottom; }
+    .data_card_tb .top_title_tb .main_cols {
+      width: 1px; }
     .data_card_tb .top_title_tb .sub_cols {
       padding-left: 20px; }
     .data_card_tb .top_title_tb .btn_cols {
@@ -4833,12 +4877,16 @@ input.props_dom {
       line-height: 1;
       color: #611452;
       font-family: 'Paperlogy';
-      position: relative; }
+      position: relative;
+      white-space: nowrap; }
   .data_card_tb .binding_title_sub {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.3;
-    color: #262626; }
+    color: #262626;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .data_card_tb .middle_row {
     display: table-row; }
   .data_card_tb .middle_cols {
@@ -4846,8 +4894,9 @@ input.props_dom {
     vertical-align: top; }
 
 .top_title_else_wrap {
-  float: right;
-  padding: 20px 22px 0 0; }
+  position: absolute;
+  top: 20px;
+  right: 22px; }
 
 .binding_data_list {
   padding: 18px 20px 18px;

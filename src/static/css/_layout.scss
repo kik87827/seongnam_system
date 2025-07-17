@@ -13,6 +13,33 @@
     &.search_util{}
     &.menu_util{}
 }
+.sub_header_wrap{background:#5f084d;padding:0 10px;}
+.sub_header_group{
+    display:table; height:90px;
+    .logo_cols,
+    .util_cols{display:table-cell;}
+    .logo_cols{vertical-align: middle; width:240px; padding-right:30px;}
+    .util_cols{vertical-align: bottom;}
+}
+.sub_toplogo{}
+.sub_toplogo_link{
+    display:inline-block;
+    img{vertical-align: middle;}
+}
+.util_dom_item{display:table;}
+.util_dom_cols{
+    display:table-cell;vertical-align:middle; padding:12px 0;
+    &.ico_cols{
+        padding-right:10px;
+        .ico{
+            > img{vertical-align: middle;}
+        }
+    }
+    &.text_cols{
+        .text_node{@include font(16px,400,1,#fff);}
+    }
+}
+
 .current_util_list{
     display:table;
     > li{
