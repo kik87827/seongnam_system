@@ -61,13 +61,16 @@ function localLayer(){
 
 function mcCardLayout() {
   var $binding_title_sub = $(".binding_title_sub");
+  var $mc_row_tb = $(".mc_row_tb");
 
-  action();
+  titleSubAction();
+  mcColsMaxSync();
   $(window).on("resize", function () {
-    action();
+    titleSubAction();
+    mcColsMaxSync();
   });
 
-  function action() {
+  function titleSubAction() {
     if ($binding_title_sub.length === 0) { return; }
     $binding_title_sub.css("width", "");
     $binding_title_sub.each(function () {
@@ -78,6 +81,22 @@ function mcCardLayout() {
 
       $this.css("width", $t_p.outerWidth() - $this.position().left - $t_else_width - 30);
     });
+  }
+
+  function mcColsMaxSync(){
+    if($mc_row_tb.length){
+      $mc_row_tb.each(function(){
+        var $this_mc = $(this);
+        var $this_chlidren = $this_mc.children();
+        var $maxArrayBowl = []; 
+        var $cssTarget = $this_chlidren.children().not(".banner_container");
+        $cssTarget.css("height","");
+        $this_chlidren.each(function(){
+          $maxArrayBowl.push($(this).outerHeight());
+        });
+       $cssTarget.css("height",Math.max.apply(null,$maxArrayBowl))
+      });
+    }
   }
 }
 

@@ -4797,6 +4797,8 @@ input.props_dom {
   .mc_row_tb .binding_cols,
   .mc_row_tb .banner_big_cols,
   .mc_row_tb .binding2_cols,
+  .mc_row_tb .liquid_medium_cols,
+  .mc_row_tb .liquid_small_cols,
   .mc_row_tb .empty_cols,
   .mc_row_tb .banner_sm_cols {
     display: table-cell;
@@ -4825,7 +4827,8 @@ input.props_dom {
   border: 1px solid #d1d1d1;
   border-radius: 8px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
 
 .data_card_tb {
   display: table;
@@ -4899,9 +4902,9 @@ input.props_dom {
   right: 22px; }
 
 .binding_data_list {
-  padding: 18px 20px 18px;
+  padding: 17px 20px 17px;
   box-sizing: border-box;
-  height: 199px; }
+  /*  height:199px; */ }
   .binding_data_list > li {
     padding-left: 11px;
     position: relative;

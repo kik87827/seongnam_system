@@ -255,6 +255,8 @@
     .binding_cols,
     .banner_big_cols,
     .binding2_cols,
+    .liquid_medium_cols,
+    .liquid_small_cols,
     .empty_cols,
     .banner_sm_cols{display:table-cell;vertical-align:top;}
     .binding_cols{width:auto;
@@ -271,7 +273,7 @@
     }
     .empty_cols{width:20px;height:50px; }
 }
-.binding_card{border:1px solid #d1d1d1; border-radius:8px; overflow:hidden; position:relative;}
+.binding_card{border:1px solid #d1d1d1; border-radius:8px; overflow:hidden; position:relative; box-sizing:border-box;}
 .data_card_tb{
     display:table;width:100%; table-layout:fixed; height:257px;
     .top_row{display:table-row;}
@@ -285,6 +287,10 @@
         .sub_cols{padding-left:20px;}
         .btn_cols{width:16px;}
     }
+    .binding_title_wrap{
+        .binding_title{}
+        .btn_icon_only{}
+    }
     .binding_title{
         position:relative;
         &:before{display:block;content:'';width:calc(100% + 20px); position:absolute;bottom:-5px;left:-10px; background:#e0ccdd; border-radius:100px; height:14px;}
@@ -294,9 +300,25 @@
     .middle_row{display:table-row;}
     .middle_cols{display:table-cell;vertical-align:top;}
 }
+.wordtab_wrap{}
+.wordtab_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.wordtab_item{
+    &:before{}
+    &.active{
+        &:before{}
+    }
+    .text_node{}
+}
+.mc_tabcont{
+    &.active{}
+}
 .top_title_else_wrap{position:absolute;top:20px;right:22px;}
 .binding_data_list{
-    padding:18px 20px 18px; box-sizing:border-box;  height:199px;
+    padding:17px 20px 17px; box-sizing:border-box; /*  height:199px; */
     > li{
         padding-left:11px; position:relative; margin-bottom:8px;
         &:before{display:block;content:'';width:3px;height:3px; background:#000;position:absolute;top:9px;left:0;}
@@ -321,3 +343,69 @@
     > img{width:100%;vertical-align:top;}
 }
 .navigation_obj_layer{position:absolute;bottom:15px;right:15px; z-index:5;}
+
+.mc_quick_wrap{}
+.mc_quick_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.mc_quick_item{}
+
+.date_linkage_container{
+    .control_row{}
+    .data_row{}
+}
+.btn_date_control{
+    &.prev{}
+    &.next{}
+}
+.date_fraction_node{}
+.linkage_block_list{
+    > li{
+        &:last-of-type{}
+    }
+    &.no_bullet{
+        > li{
+            &:last-of-type{}
+        }
+    }
+}
+.linkage_block_item{}
+.linkage_block_dom{
+    .ico{
+        &.check{}
+        &.checked{}
+    }
+    .text_node{}
+}
+.banner_capsule_wrap{
+
+}
+.banner_capsule_list{
+    > li{
+       &:last-of-type{} 
+    }
+}
+.banner_capsule_item{
+    .text_node{}
+    .ico{
+        &.shape_01{}
+        &.shape_02{}
+        &.shape_03{}
+        &.shape_04{}
+        &.shape_05{}
+    }
+}
+
+.notice_sector_list{
+    > li{
+        &:last-of-type{} 
+    }
+}
+.notice_sector_item{
+    .key_row{}
+    .caption_row{}
+}
+.sector_keyword{}
+.sector_caption{}
