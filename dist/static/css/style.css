@@ -3254,6 +3254,8 @@ a.ui-button:active,
   display: inline-block; }
   .btn_icon_only.setting {
     background-image: url("../images/ico_setting_16.png"); }
+  .btn_icon_only.more {
+    background-image: url("../images/ico_more_17_2.png"); }
 
 /* slick */
 .slick_control_list {
@@ -4822,6 +4824,10 @@ input.props_dom {
   .mc_row_tb .empty_cols {
     width: 20px;
     height: 50px; }
+  .mc_row_tb .liquid_medium_cols {
+    width: auto; }
+  .mc_row_tb .liquid_small_cols {
+    width: 31.38%; }
 
 .binding_card {
   border: 1px solid #d1d1d1;
@@ -4834,7 +4840,7 @@ input.props_dom {
   display: table;
   width: 100%;
   table-layout: fixed;
-  height: 257px; }
+  /* height:257px; */ }
   .data_card_tb .top_row {
     display: table-row; }
   .data_card_tb .top_cols {
@@ -4853,6 +4859,7 @@ input.props_dom {
     width: 100%;
     box-sizing: border-box; }
     .data_card_tb .top_title_tb .main_cols,
+    .data_card_tb .top_title_tb .else_cols,
     .data_card_tb .top_title_tb .sub_cols {
       display: table-cell;
       vertical-align: bottom; }
@@ -4862,8 +4869,28 @@ input.props_dom {
       padding-left: 20px; }
     .data_card_tb .top_title_tb .btn_cols {
       width: 16px; }
+    .data_card_tb .top_title_tb .else_cols {
+      text-align: right; }
+  .data_card_tb .binding_title_wrap {
+    /* .binding_title,
+        .btn_icon_only{}
+        .binding_title{}
+        .btn_icon_only{margin:3px 0 0 12px;}
+        &:after{display:block;content:'';clear:both;} */
+    display: table; }
+  .data_card_tb .binding_title_td {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 10px; }
+    .data_card_tb .binding_title_td .btn_icon_only {
+      position: relative;
+      top: 2px; }
+    .data_card_tb .binding_title_td:last-of-type {
+      padding-right: 0; }
   .data_card_tb .binding_title {
     position: relative; }
+    .data_card_tb .binding_title.notape:before {
+      display: none; }
     .data_card_tb .binding_title:before {
       display: block;
       content: '';
@@ -4895,6 +4922,11 @@ input.props_dom {
   .data_card_tb .middle_cols {
     display: table-cell;
     vertical-align: top; }
+
+.mc_tabcont {
+  display: none; }
+  .mc_tabcont.active {
+    display: block; }
 
 .top_title_else_wrap {
   position: absolute;

@@ -272,27 +272,43 @@
         .banner_container{width:340px;}
     }
     .empty_cols{width:20px;height:50px; }
+    .liquid_medium_cols{width:auto;}
+    .liquid_small_cols{width:31.38%;}
 }
 .binding_card{border:1px solid #d1d1d1; border-radius:8px; overflow:hidden; position:relative; box-sizing:border-box;}
 .data_card_tb{
-    display:table;width:100%; table-layout:fixed; height:257px;
+    display:table;width:100%; table-layout:fixed; /* height:257px; */
     .top_row{display:table-row;}
     .top_cols{display:table-cell;vertical-align:middle;background:#f8f8f8;border-bottom:1px solid #d1d1d1; height:54px;
         &:after{display:block;content:'';clear:both;}
     }
     .top_title_tb{display:table;padding:16px 20px; width:100%; box-sizing: border-box;
         .main_cols,
+        .else_cols,
         .sub_cols{display:table-cell;vertical-align:bottom;}
         .main_cols{width:1px;}
         .sub_cols{padding-left:20px;}
         .btn_cols{width:16px;}
+        .else_cols{text-align:right;}
     }
     .binding_title_wrap{
-        .binding_title{}
+        /* .binding_title,
         .btn_icon_only{}
+        .binding_title{}
+        .btn_icon_only{margin:3px 0 0 12px;}
+        &:after{display:block;content:'';clear:both;} */
+        display:table;
+    }
+    .binding_title_td{display:table-cell;vertical-align: middle;padding-right:10px;
+        
+        .btn_icon_only{position:relative;top:2px;}
+        &:last-of-type{padding-right:0;}
     }
     .binding_title{
         position:relative;
+        &.notape{
+            &:before{display:none;}
+        }
         &:before{display:block;content:'';width:calc(100% + 20px); position:absolute;bottom:-5px;left:-10px; background:#e0ccdd; border-radius:100px; height:14px;}
         .text_node{@include font(20px,500,1,#611452); @include Paperlogy; position:relative; white-space: nowrap}
     }
@@ -314,7 +330,8 @@
     .text_node{}
 }
 .mc_tabcont{
-    &.active{}
+    display:none;
+    &.active{display:block;}
 }
 .top_title_else_wrap{position:absolute;top:20px;right:22px;}
 .binding_data_list{

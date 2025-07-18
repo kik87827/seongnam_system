@@ -16,6 +16,7 @@
 .btn_icon_only{
     width:16px;height:16px;@include bgicon; display:inline-block;
     &.setting{background-image:url("../images/ico_setting_16.png");}
+    &.more{background-image:url("../images/ico_more_17_2.png");}
 }
 
 /* slick */
