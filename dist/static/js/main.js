@@ -1,6 +1,7 @@
 $(function() {
   localLayer();
   slickControlCardCall();
+  mcTabFunc();
 });
 $(window).on("load", function() {
   maxHeightEach([{
@@ -90,7 +91,7 @@ function mcCardLayout() {
         var $this_mc = $(this);
         var $this_chlidren = $this_mc.children();
         var $maxArrayBowl = [];
-        var $cssTarget = $this_chlidren.children().not(".banner_container");
+        var $cssTarget = $this_chlidren.children().not(".banner_container,.banner_capsule_wrap");
         $cssTarget.css("height", "");
         $this_chlidren.each(function() {
           $maxArrayBowl.push($(this).outerHeight());
@@ -172,5 +173,24 @@ function slickControlCardCall() {
       $(this).hide();
       $btn_control_pause.show();
     });
+  });
+}
+
+function mcTabFunc() {
+  var wordtab_item = $(".d_tab .wordtab_item");
+  wordtab_item.on("click", function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $this_list = $this.closest(".wordtab_list");
+    var $this_notitem = $this_list.find(".wordtab_item");
+    var $this_cont = $($this.attr("href"));
+    $this_notitem.removeClass("active");
+    $this.addClass("active");
+
+
+    $this_cont.siblings(".mc_tabcont").hide();
+    $this_cont.show();
+
+    $(window).trigger("resize");
   });
 }
