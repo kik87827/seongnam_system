@@ -4308,8 +4308,7 @@ input.props_dom {
       margin-right: 0px; } }
 
 @media (max-width: 1280px) {
-  .btn_right_wrap {
-    text-align: left; }
+  /* .btn_right_wrap {text-align: left;} */
   .btn_float_wrap .btn_float_right {
     float: left; }
   input[type="text"].fr_input_txt.type2 {
