@@ -360,7 +360,7 @@ input.props_dom{
 }
 .popup_scut_list > li {
     float: left; width: 25%; margin-bottom: 20px;
-    &:nth-of-type(5n){clear: both; float: left;}
+    &:nth-child(4n+1){clear:both; float:left;}
 }
 .scut_input {
     display: none;

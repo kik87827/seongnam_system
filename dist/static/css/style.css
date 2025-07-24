@@ -4341,7 +4341,7 @@ input.props_dom {
   float: left;
   width: 25%;
   margin-bottom: 20px; }
-  .popup_scut_list > li:nth-of-type(5n) {
+  .popup_scut_list > li:nth-child(4n+1) {
     clear: both;
     float: left; }
 
