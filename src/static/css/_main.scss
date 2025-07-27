@@ -72,7 +72,9 @@
 .quadcard_label_row{margin-top:12px;}
 .mv_quadlocal_layer{
     display:none; position:absolute;top:100%;left:6px; background:#fff; border:2px solid #8b1c74; overflow:hidden; border-radius:8px; width:207px; box-sizing:border-box;
-
+    &.pos2{
+        left:0;width:100%; top:calc(100% + 15px);
+    }
     .title_row{background:#ae609d;padding:10px 45px 10px 15px;}
     .quadlocal_title{@include font(16px,600,1,#fff);}
     .contents_row{padding:14px 12px;}
@@ -243,12 +245,12 @@
 
 .mc_zone{margin:30px 0 70px;position:relative;z-index:1;}
 .mc_row{
-    margin-bottom:25px;
+    margin-bottom:25px; position:relative;
     &:last-of-type{margin-bottom:0}
-    &.mc_01{}
-    &.mc_02{}
-    &.mc_03{}
-    &.mc_04{}
+    &.mc_01{z-index:4;}
+    &.mc_02{z-index:3;}
+    &.mc_03{z-index:2;}
+    &.mc_04{z-index:1;}
 }
 .mc_row_tb{
     display:table;width:100%; margin:0 auto; max-width:1425px; padding:0 30px; box-sizing: border-box; 
@@ -268,7 +270,7 @@
     .banner_sm_cols{width:230px;
         .banner_container{width:230px;}
     }
-    .banner_cols{width:340px;
+    .banner_cols{width:340px; position:relative;
         .banner_container{width:340px;}
     }
     .empty_cols{width:20px;height:50px; }
@@ -285,6 +287,7 @@
     .top_title_tb{display:table;padding:16px 20px; width:100%; box-sizing: border-box;
         .main_cols,
         .else_cols,
+        .td_cols,
         .sub_cols{display:table-cell;vertical-align:bottom;}
         .main_cols{width:1px;}
         .sub_cols{padding-left:20px;}
@@ -293,6 +296,10 @@
             .wordtab_wrap{float:right;}
             &::after{display:block;content:'';clear:both;}
         }
+        .td_cols{
+
+        }
+        &.type2{padding-right:50px;}
     }
     .binding_title_wrap{
         /* .binding_title,
@@ -473,11 +480,80 @@
 .sector_keyword{@include font(16px,500,1.4,#3d55bf);}
 .sector_caption{@include font(16px,400,1.4,#000);}
 
+.card_menutab_list{
+    
+    > li{display:block;float:left; padding-right:17px; position:relative;
+        &:first-of-type{
+            .binding_tabmenu{
+                &.active{margin-left:0;}
+            }
+        }
+        &:after{display:block;content:'|';position:absolute;top:6px;right:6px;}
+        &.active{
+            .binding_tabmenu{
+                top:0;
+                &:before{display:block;content:'';width:calc(100% + 20px); position:absolute;bottom:-2px;left:-10px; background:#e0ccdd; border-radius:100px; height:14px;}
+                .text_node{@include font(20px,500,1,#611452); position:relative; white-space: nowrap}
+            }
+            &:after{display:none;}
+        }
+        &:last-of-type{
+            padding-right:0;
+            &:after{display:none;}
+        }
+        &.active_before{
+            &:after{display:none;}
+        }
+    }
+    &::after{display:block;content:'';clear:both;}
+}
+.binding_tabmenu{
+    position:relative; top:4px;
+    .text_node{@include font(14px,400,1.3,#262626); @include Paperlogy;}
+    &.active{
+        margin:0 5px; top:0;
+        &:before{display:block;content:'';width:calc(100% + 20px); position:absolute;bottom:-5px;left:-10px; background:#e0ccdd; border-radius:100px; height:14px;}
+        .text_node{@include font(20px,500,1,#611452); position:relative; white-space: nowrap}
+    }
+}
+
+.card_tabcont{
+    position:relative;overflow:hidden;width:0;height:0;
+    &.active{width:auto;height:auto;overflow: visible;}
+}
+
 @media (max-width:1400px){
     .mc_quick_item{font-size:16px;
         &:before{top:3px;}
     }
     .banner_capsule_item{
         .text_node{font-size:17px;}
+    }
+
+
+    .card_menutab_list{
+        > li{padding-right:12px;
+            &:after{right:4px; top:4px;}
+            &.active{
+                .binding_tabmenu{
+                    &:before{width:calc(100% + 10px);left:-5px;height:10px;}
+                }
+            }
+        }
+    }
+    .binding_tabmenu{
+        top:4px;
+        .text_node{
+            font-size:12px;
+        }
+    }
+    .card_menutab_list{
+         > li{
+            &.active{
+                 .binding_tabmenu{
+                     .text_node{font-size:16px;}
+                 }
+            }
+         }
     }
 }

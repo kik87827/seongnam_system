@@ -37,9 +37,13 @@ function localLayer() {
     var $this = $(this);
     var $thisZone = $this.closest(".banner_global_zone");
     var $thisLayer = $thisZone.find(".mv_quadlocal_layer");
+    var $target = $this.attr("data-target");
     $(".mv_quadlocal_layer").not($thisLayer).hide();
-    $thisLayer.toggle();
-    console.log($thisLayer);
+    if ($($target).length) {
+      $($target).toggle();
+    } else {
+      $thisLayer.toggle();
+    }
   });
   $(".btn_quadlocal_close").on("click", function(e) {
     e.preventDefault();
@@ -57,6 +61,9 @@ function localLayer() {
       $(".mv_quadlocal_layer").hide();
     }
   });
+
+  // 자리이동
+  $(".mc_row_tb .banner_cols .mv_quadlocal_layer").appendTo(".mc_row_tb .banner_cols");
 }
 
 function mcCardLayout() {
@@ -91,7 +98,7 @@ function mcCardLayout() {
         var $this_mc = $(this);
         var $this_chlidren = $this_mc.children();
         var $maxArrayBowl = [];
-        var $cssTarget = $this_chlidren.children().not(".banner_container,.banner_capsule_wrap");
+        var $cssTarget = $this_chlidren.children().not(".banner_container,.banner_capsule_wrap,.mv_quadlocal_layer");
         $cssTarget.css("height", "");
         $this_chlidren.each(function() {
           $maxArrayBowl.push($(this).outerHeight());
@@ -178,6 +185,8 @@ function slickControlCardCall() {
 
 function mcTabFunc() {
   var wordtab_item = $(".d_tab .wordtab_item");
+  var $card_menutab_li = $(".card_menutab_list > li");
+  var binding_tabmenu = $(".binding_tabmenu");
   wordtab_item.on("click", function(e) {
     e.preventDefault();
     var $this = $(this);
@@ -191,6 +200,28 @@ function mcTabFunc() {
     $this_cont.siblings(".mc_tabcont").hide();
     $this_cont.show();
 
+    $(window).trigger("resize");
+  });
+  $card_menutab_li.each(function() {
+    var $this = $(this);
+    if ($this.hasClass("active")) {
+      $this.prev().addClass("active_before");
+    }
+  });
+  binding_tabmenu.on("click", function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $this_list = $this.closest(".card_menutab_list");
+    var $this_notitem = $this_list.children("li");
+    var $this_cont = $($this.attr("href"));
+    $this_notitem.removeClass("active");
+    $this_notitem.removeClass("active_before");
+    $this.closest("li").addClass("active");
+    $this.closest("li").prev().addClass("active_before");
+
+
+    $this_cont.siblings(".card_tabcont").removeClass("active");
+    $this_cont.addClass("active");
     $(window).trigger("resize");
   });
 }
