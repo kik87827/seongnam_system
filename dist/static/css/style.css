@@ -3552,6 +3552,8 @@ a.ui-button:active,
       -webkit-appearance: none;
          -moz-appearance: none;
               appearance: none;
+      padding-right: 30px;
+      width: 130px;
       -ms-appearance: none;
       background-position: top 50% right 12px;
       background-repeat: no-repeat;
