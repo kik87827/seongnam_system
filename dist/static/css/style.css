@@ -1890,6 +1890,10 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker {
   width: 17em;
   padding: .2em .2em 0;
+  z-index: 10100 !important;
+  box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.2);
   display: none; }
 
 .ui-datepicker .ui-datepicker-header {
