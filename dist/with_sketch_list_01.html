@@ -413,17 +413,17 @@
 									<tr>
 										<th>작성일</th>
 										<td>
-											<input type="text" class="fr_input_txt datepicker inp" readonly />
+											<input type="text" class="fr_input_txt input_datepicker inp" readonly />
 											<span class="date_flow">~</span>
-											<input type="text" class="fr_input_txt datepicker inp" readonly />
+											<input type="text" class="fr_input_txt input_datepicker inp" readonly />
 											<button class="adm_btn sort_btn date_reset">날짜 초기화</button>
 										</td>
 										<th>보고일</th>
 										<td>
 											<div class="sort_date_wrap">
-												<input type="text" class="fr_input_txt datepicker inp" readonly />
+												<input type="text" class="fr_input_txt input_datepicker inp" readonly />
 												<span class="date_flow">~</span>
-												<input type="text" class="fr_input_txt datepicker inp" readonly />
+												<input type="text" class="fr_input_txt input_datepicker inp" readonly />
 												<button class="adm_btn sort_btn date_reset">날짜 초기화</button>
 											</div>
 										</td>
@@ -465,10 +465,10 @@
 										<thead>
 											<tr>
 												<th class="has_total_dom">
-													<div class="props_item">
-														<input type="checkbox" class="props_dom" id="list_total_chk" />
-														<label for="list_total_chk" class="props_label"></label>
-													</div>
+													<label class="form-checkbox">
+														<input type="checkbox" name="chkSktcSeq" />
+														<i class="indicator"></i>
+													</label>
 												</th>
 												<th>순번</th>
 												<th>항목</th>
@@ -481,8 +481,10 @@
 										<tbody>
 											<tr>
 												<td class="has_form">
-													<input type="checkbox" class="props_dom" id="list_chk_01" />
-													<label for="list_chk_01" class="props_label"></label>
+													<label class="form-checkbox">
+														<input type="checkbox" disabled />
+														<i class="indicator"></i>
+													</label>
 												</td>
 												<td>4</td>
 												<td>시민생활 정보 안내</td>
@@ -590,7 +592,7 @@
 										<tr>
 											<th>보고일자</th>
 											<td>
-												<input type="text" class="fr_input_txt w100per datepicker inp" readonly />
+												<input type="text" class="fr_input_txt w100per input_datepicker inp" readonly />
 											</td>
 										</tr>
 									</tbody>

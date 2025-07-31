@@ -419,7 +419,7 @@ function datePickEvt() {
       yearSuffix: "년",
     });
 
-    $(".datepicker").datepicker({
+    $(".input_datepicker").datepicker({
       minDate: 0,
     });
   });
