@@ -306,14 +306,14 @@ input.props_dom{
 
 
 /* custom checkbox */
-.form-checkbox,.form-radio{display:inline-block;position:relative;cursor:pointer;word-break:keep-all;-ms-word-break:keep-all;padding-left:19px;vertical-align:middle;min-height:19px;
+.props-checkbox,.props-radio{display:inline-block;position:relative;cursor:pointer;word-break:keep-all;-ms-word-break:keep-all;padding-left:19px;vertical-align:middle;min-height:19px;
   -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-.form-checkbox input,.form-radio input{position:absolute;top:0;left:0;height:0;width:0;}
-.form-checkbox .indicator,.form-radio .indicator{position:absolute;top:0;left:0;width:17px; cursor: pointer; height:17px;@include bgicon; background-color:#fff; background-image:url("../images/ico_checkbox_22.png");border:1px solid #DBDBDB; }
-.form-checkbox .indicator{ border-radius:4px;  cursor: pointer;}
-.form-radio .indicator{border-radius:50%;}
-.form-checkbox input:checked + .indicator{background-position:0 100%;}
-.form-checkbox input:disabled + .indicator{opacity: 0.5; border-color: #9e9e9e; background-color: #dedede; cursor: default;}
+.props-checkbox input,.props-radio input{position:absolute;top:0;left:0;height:0;width:0;}
+.props-checkbox .indicator,.props-radio .indicator{position:absolute;top:0;left:0;width:17px; cursor: pointer; height:17px;@include bgicon; background-color:#fff; background-image:url("../images/ico_checkbox_22.png");border:1px solid #DBDBDB; }
+.props-checkbox .indicator{ border-radius:4px;  cursor: pointer;}
+.props-radio .indicator{border-radius:50%;}
+.props-checkbox input:checked + .indicator{background-position:0 100%;}
+.props-checkbox input:disabled + .indicator{opacity: 0.5; border-color: #9e9e9e; background-color: #dedede; cursor: default;}
 
 /* datepicker */
 .ui-widget-header {border: 0px solid #dddddd;background: #fff;}
