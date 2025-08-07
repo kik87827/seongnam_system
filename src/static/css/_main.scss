@@ -488,7 +488,7 @@
                 &.active{margin-left:0;}
             }
         }
-        &:after{display:block;content:'|';position:absolute;top:6px;right:6px;}
+        &:after{display:block;content:'|';position:absolute;top:2px;right:6px;}
         &.active{
             .binding_tabmenu{
                 top:0;

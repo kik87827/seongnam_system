@@ -15,7 +15,7 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
 body {
-  font-family: 'Pretendard',Dotum,verdana,sans-serif;
+  font-family: 'Noto Sans KR',Dotum,verdana,sans-serif;
   font-size: 12px; }
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, nav, menu, section, article, aside, main, video {
@@ -37,7 +37,7 @@ table th, table td {
   text-align: center;
   vertical-align: middle;
   font-weight: normal;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 ol, ul, li {
   list-style: none outside none; }
@@ -57,14 +57,14 @@ button {
   background: none;
   cursor: pointer;
   padding: 0;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 button span {
   position: relative;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 select {
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 /* select:focus{outline: 1px dotted #767676;} */
 strong {
@@ -96,7 +96,7 @@ audio, canvas, progress, video {
   vertical-align: baseline; }
 
 input[type="text"], input[type="password"] {
-  font-family: 'Pretendard';
+  font-family: 'Noto Sans KR';
   color: #000;
   border: 1px solid #c8c8c8;
   -webkit-appearance: none;
@@ -108,7 +108,7 @@ input[type="tel"],
 input[type="number"],
 input[type="password"] {
   border-radius: 0;
-  font-family: 'Pretendard';
+  font-family: 'Noto Sans KR';
   color: #5d5d5d;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -126,7 +126,7 @@ table caption {
   left: -99999px; }
 
 textarea {
-  font-family: 'Pretendard';
+  font-family: 'Noto Sans KR';
   color: #000;
   border: 1px solid #c8c8c8;
   -webkit-appearance: none;
@@ -139,23 +139,23 @@ input:focus + label{
 } */
 ::-webkit-input-placeholder {
   color: #cccccc;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 ::-moz-input-placeholder {
   color: #cccccc;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 :-ms-input-placeholder {
   color: #cccccc;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 ::-ms-input-placeholder {
   color: #cccccc;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 ::input-placeholder {
   color: #cccccc;
-  font-family: 'Pretendard'; }
+  font-family: 'Noto Sans KR'; }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -224,58 +224,53 @@ img.ico_img {
   max-width: 100%; }
 
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-display: swap;
-  src: local("Pretendard Black"), url("./webfont/Pretendard-Black.woff2") format("woff2"), url("./webfont/Pretendard-Black.woff") format("woff"); }
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-display: swap;
-  src: local("Pretendard ExtraBold"), url("./webfont/Pretendard-ExtraBold.woff2") format("woff2"), url("./webfont/Pretendard-ExtraBold.woff") format("woff"); }
-
-@font-face {
-  font-family: "Pretendard";
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-Bold.eot");
+  src: url("./webfont/NotoSans-Bold.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Bold.woff2") format("woff2"), url("./webfont/NotoSans-Bold.woff") format("woff"), url("./webfont/NotoSans-Bold.ttf") format("truetype"), url("./webfont/NotoSans-Bold.svg#NotoSans-Bold") format("svg");
   font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url("./webfont/Pretendard-Bold.woff2") format("woff2"), url("./webfont/Pretendard-Bold.woff") format("woff"); }
+  font-style: normal; }
 
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url("./webfont/Pretendard-SemiBold.woff2") format("woff2"), url("./webfont/Pretendard-SemiBold.woff") format("woff"); }
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url("./webfont/Pretendard-Medium.woff2") format("woff2"), url("./webfont/Pretendard-Medium.woff") format("woff"); }
-
-@font-face {
-  font-family: "Pretendard";
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-Regular.eot");
+  src: url("./webfont/NotoSans-Regular.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Regular.woff2") format("woff2"), url("./webfont/NotoSans-Regular.woff") format("woff"), url("./webfont/NotoSans-Regular.ttf") format("truetype"), url("./webfont/NotoSans-Regular.svg#NotoSans-Regular") format("svg");
   font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url("./webfont/Pretendard-Regular.woff2") format("woff2"), url("./webfont/Pretendard-Regular.woff") format("woff"); }
+  font-style: normal; }
 
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 300;
-  font-display: swap;
-  src: local("Pretendard Light"), url("./webfont/Pretendard-Light.woff2") format("woff2"), url("./webfont/Pretendard-Light.woff") format("woff"); }
-
-@font-face {
-  font-family: "Pretendard";
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-Thin.eot");
+  src: url("./webfont/NotoSans-Thin.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Thin.woff2") format("woff2"), url("./webfont/NotoSans-Thin.woff") format("woff"), url("./webfont/NotoSans-Thin.ttf") format("truetype"), url("./webfont/NotoSans-Thin.svg#NotoSans-Thin") format("svg");
   font-weight: 200;
-  font-display: swap;
-  src: local("Pretendard ExtraLight"), url("./webfont/Pretendard-ExtraLight.woff2") format("woff2"), url("./webfont/Pretendard-ExtraLight.woff") format("woff"); }
+  font-style: normal; }
 
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 100;
-  font-display: swap;
-  src: local("Pretendard Thin"), url("./webfont/Pretendard-Thin.woff2") format("woff2"), url("./webfont/Pretendard-Thin.woff") format("woff"); }
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-Black.eot");
+  src: url("./webfont/NotoSans-Black.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Black.woff2") format("woff2"), url("./webfont/NotoSans-Black.woff") format("woff"), url("./webfont/NotoSans-Black.ttf") format("truetype"), url("./webfont/NotoSans-Black.svg#NotoSans-Black") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-Light.eot");
+  src: url("./webfont/NotoSans-Light.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Light.woff2") format("woff2"), url("./webfont/NotoSans-Light.woff") format("woff"), url("./webfont/NotoSans-Light.ttf") format("truetype"), url("./webfont/NotoSans-Light.svg#NotoSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-DemiLight.eot");
+  src: url("./webfont/NotoSans-DemiLight.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-DemiLight.woff2") format("woff2"), url("./webfont/NotoSans-DemiLight.woff") format("woff"), url("./webfont/NotoSans-DemiLight.ttf") format("truetype"), url("./webfont/NotoSans-DemiLight.svg#NotoSans-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url("./webfont/NotoSans-Medium.eot");
+  src: url("./webfont/NotoSans-Medium.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Medium.woff2") format("woff2"), url("./webfont/NotoSans-Medium.woff") format("woff"), url("./webfont/NotoSans-Medium.ttf") format("truetype"), url("./webfont/NotoSans-Medium.svg#NotoSans-Light") format("svg");
+  font-weight: 500;
+  font-style: normal; }
 
 @font-face {
   font-family: "GmarketSans";
@@ -405,7 +400,7 @@ img.ico_img {
 .sub_toplogo_link {
   display: inline-block; }
   .sub_toplogo_link img {
-    vertical-align: top;
+    vertical-align: middle;
     height: 40px; }
 
 .util_dom_item {
@@ -545,7 +540,7 @@ select.search_util_select:disabled {
   position: relative;
   padding-right: 43px; }
 
-input.search_util_input {
+input[type="text"].search_util_input {
   height: 35px;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -555,12 +550,12 @@ input.search_util_input {
   width: 100%;
   line-height: 1;
   box-sizing: border-box; }
-  input.search_util_input::-moz-placeholder {
+  input[type="text"].search_util_input::-moz-placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
     color: #000; }
-  input.search_util_input::placeholder {
+  input[type="text"].search_util_input::placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
@@ -4446,7 +4441,7 @@ input.props_dom {
     .scut_input + label::after {
       content: '';
       position: absolute;
-      top: 13px;
+      top: 12px;
       left: 0;
       transform: translateY(-50%);
       display: inline-block;
@@ -5502,7 +5497,7 @@ input.props_dom {
     display: block;
     content: '|';
     position: absolute;
-    top: 6px;
+    top: 2px;
     right: 6px; }
   .card_menutab_list > li.active .binding_tabmenu {
     top: 0; }

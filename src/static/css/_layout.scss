@@ -24,7 +24,7 @@
 .sub_toplogo{}
 .sub_toplogo_link{
     display:inline-block; 
-    img{vertical-align: top; height:40px}
+    img{vertical-align: middle; height:40px}
 }
 .util_dom_item{display:table;}
 .util_dom_cols{
@@ -90,7 +90,7 @@ select.search_util_select:disabled{background-color:#f7f7f7;color:#999999;;opaci
 
 
 .search_util_field{position:relative;padding-right:43px;}
-input.search_util_input{height: 35px; appearance: none; border: 0; border-radius: 0; width:100%; line-height:1; box-sizing: border-box;
+input[type="text"].search_util_input{height: 35px; appearance: none; border: 0; border-radius: 0; width:100%; line-height:1; box-sizing: border-box;
     &::placeholder{@include font(14px,500,1,#000);}
 }
 .btn_search_util{width:35px;height:35px;background-position:50% 50%; background-repeat:no-repeat; background-size:16px auto; background-image:url("../images/ico_serach_16.png");position:absolute;top:0;right:8px;}
