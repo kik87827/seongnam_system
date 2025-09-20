@@ -44,4 +44,5 @@ gulp.task('watch', function () {
     gulp.watch(['./src/static/js/*.js'], ['beautify']);
 });
 
-gulp.task('default', ['scss', 'fileinclude', 'beautify', 'watch']);
+/* gulp.task('default', ['scss', 'fileinclude', 'beautify', 'watch']); */
+gulp.task('default', ['fileinclude', 'beautify', 'watch']);
