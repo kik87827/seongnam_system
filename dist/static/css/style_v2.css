@@ -1,3 +1,64 @@
 /* popup */
 .popup_item.size5 { max-width: 600px; }
 .popup_item.size6 { max-width: 890px; }
+
+
+/* button */
+button.btn_data_search{font-family: 'Paperlogy';}
+button.btn_data_search.skin2{background-color:#8b1c74;}
+
+
+/* contents block */
+.sc_block_wrap{}
+.sc_block_wrap + .board_container{margin-top:40px;}
+.sc_block{margin-bottom:25px;}
+.sc_block:last-of-type{margin-bottom:0;}
+.sc_btitle_row{margin-bottom:17px;}
+.sc_btitle{font-family: 'Paperlogy'; font-size:18px; font-weight: 500; color:#77015e;}
+
+/* table */
+.stb_thtext{font-family: 'Paperlogy'; display:inline-block; font-size:16px;}
+
+/* form */
+.inline_td_list{display:table;border-spacing: 0; padding:0;border-collapse: collapse; font-size:0;line-height:0;}
+.inline_td_list .inline_cols{display:table-cell; vertical-align: middle;}
+.inline_td_list .inline_cols.empty{width:10px;}
+.inline_td_list .inline_cols.has_unit{padding:0 5px;}
+.inline_td_list .inline_cols .fr_input_txt,
+.inline_td_list .inline_cols .date_flow{margin:0;}
+
+input.fr_input_txt.input_datepicker{line-height:1;}
+
+
+/* board */
+.linkage_board_box{border-radius: 12px; font-family: 'Paperlogy'; background:#f9f3f8; display:table;width:100%; box-sizing: border-box; padding:20px;}
+.linkage_board_box .total_cols,
+.linkage_board_box .detail_cols{display:table-cell;}
+.linkage_board_box .cols{display:table-cell;}
+.linkage_board_box .total_cols{width:1px;white-space: nowrap;}
+.linkage_board_box .detail_cols{}
+.linkage_board_box .cols.empty{width:90px;}
+.linkage_text_node{font-size:15px; }
+.linkage_text_node.magenta{color:#8b1c74;}
+.linkage_text_node.dark{color:#292929;}
+.color_emp.red{}
+.color_emp.red{color:#f81e1e;}
+.color_emp.blue{color:#2a6bff;}
+.color_emp.blue *{color:#2a6bff;}
+.linkage_board_box .detail_cols .text_link_item{ font-weight:500;}
+
+
+.list_table.fixed_type{table-layout:fixed;}
+.list_thtext{display:inline-block;white-space: nowrap;}
+
+.board_fraction_row{margin-bottom:18px;}
+.board_fraction_message{font-size:16px; color:#000000; font-family: 'Paperlogy';}
+.fraction_count{color:#a50082;}
+
+.list_tdtext{color:#2f2f2f;display:inline-block; white-space: nowrap;}
+.list_tdtext.red_emp{color:#f81e1e;}
+.list_tdtext.blue_emp{color:#2a6bff;}
+.list_tdtext.bold{font-weight:500;}
+
+.list_table_wrap .list_table tbody td.define_title{text-align: center;}
+.list_table_wrap .list_table tbody td.define_title .list_tdtext{position:relative;top:2px;line-height:1;}

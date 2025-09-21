@@ -15,7 +15,231 @@
             <div class="sub_right_title_row">
               <h2 class="sub_right_title">국회의실</h2>
             </div>
-            <div class="sub_contents">내용이 들어갑니다.</div>
+            <div class="sub_contents">
+              <div class="sc_block_wrap">
+                <div class="sc_block">
+                  <div class="sc_btitle_row">
+                    <p class="sc_btitle">국회의실 사용신청</p>
+                  </div>
+                  <div class="sc_bcontents_row">
+                    <div class="sort_tb_wrap">
+                      <table class="sort_tb">
+                        <caption>국회의실 사용신청표</caption>
+                        <colgroup>
+                          <col style="width: 10%" />
+                          <col />
+                          <col style="width: 10%" />
+                          <col />
+                        </colgroup>
+                        <tr>
+                          <th><span class="stb_thtext">검색</span></th>
+                          <td colspan="3">
+                            <div class="inline_td_list">
+                              <div class="inline_cols">
+                                <select required class="form_select tb_border" style="width: 120px">
+                                  <option value="" disabled selected hidden>-- 전체 --</option>
+                                  <option value="opt_01">옵션1</option>
+                                  <option value="opt_02">옵션2</option>
+                                </select>
+                              </div>
+                              <div class="inline_cols empty"></div>
+                              <div class="inline_cols">
+                                <input type="text" class="fr_input_txt type_wd" />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th><span class="stb_thtext">기관</span></th>
+                          <td>
+                            <select required class="form_select tb_border" style="width: 120px">
+                              <option value="" disabled hidden>-- 전체 --</option>
+                              <option value="opt_01" selected>성남시청</option>
+                              <option value="opt_02">옵션2</option>
+                            </select>
+                          </td>
+                          <th><span class="stb_thtext">국회의실명</span></th>
+                          <td>
+                            <select required class="form_select tb_border" style="width: 225px">
+                              <option value="" disabled selected hidden>-- 전체 --</option>
+                              <option value="opt_01">옵션1</option>
+                              <option value="opt_02">옵션2</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th><span class="stb_thtext">신청일자</span></th>
+                          <td>
+                            <div class="inline_td_list">
+                              <div class="inline_cols">
+                                <input type="text" class="fr_input_txt input_datepicker inp" style="width: 120px" readonly />
+                              </div>
+                              <div class="inline_cols has_unit"><span class="date_flow">~</span></div>
+                              <div class="inline_cols">
+                                <input type="text" class="fr_input_txt input_datepicker inp" style="width: 120px" readonly />
+                              </div>
+                            </div>
+                          </td>
+                          <th><span class="stb_thtext">승인상태</span></th>
+                          <td>
+                            <select required class="form_select tb_border" style="width: 225px">
+                              <option value="" disabled selected hidden>-- 전체 --</option>
+                              <option value="opt_01">옵션1</option>
+                              <option value="opt_02">옵션2</option>
+                            </select>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="btn_right_wrap">
+                      <div class="btn_float_left">
+                        <button class="btn_data_search skin2">조회</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sc_block">
+                  <div class="sc_btitle_row">
+                    <p class="sc_btitle">관리자 현황판</p>
+                  </div>
+                  <div class="sc_bcontents_row">
+                    <div class="linkage_board_box">
+                      <div class="cols total_cols">
+                        <!-- prettier-ignore -->
+                        <span class="linkage_text_node magenta">미승인[ <strong class="color_emp red">6</strong> ]건</span>
+                      </div>
+                      <div class="cols empty"></div>
+                      <div class="cols detail_cols">
+                        <!-- prettier-ignore -->
+                        <span class="linkage_text_node dark">담당정보국회의실 [ <strong class="color_emp blue"><a href="javascript:;" class="text_link_item">국회의실1</a> / <a href="javascript:;" class="text_link_item">국회의실1</a> / <a href="javascript:;" class="text_link_item">국회의실1</a> / <a href="javascript:;" class="text_link_item">국회의실4</a> </strong>]</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="board_container">
+                <div class="board_fraction_row">
+                  <!-- prettier-ignore -->
+                  <p class="board_fraction_message">* 총 <strong class="fraction_count">96</strong> 건이 조회되었습니다.</p>
+                </div>
+                <div class="board_list_row">
+                  <div class="list_table_wrap">
+                    <table class="list_table fixed_type">
+                      <colgroup>
+                        <col style="width: 5%" />
+                        <col style="width: 6%" />
+                        <col style="width: 10%" />
+                        <col />
+                        <col style="width: 8%" />
+                        <col style="width: 15%" />
+                        <col style="width: 9%" />
+                        <col style="width: 9%" />
+                        <col style="width: 9%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="has_total_dom">
+                            <label class="props-checkbox">
+                              <input type="checkbox" />
+                              <i class="indicator"></i>
+                            </label>
+                          </th>
+                          <th><span class="list_thtext">순번</span></th>
+                          <th><span class="list_thtext">국회의실</span></th>
+                          <th><span class="list_thtext">행사(회의)명</span></th>
+                          <th><span class="list_thtext">기관</span></th>
+                          <th><span class="list_thtext">사용부서</span></th>
+                          <th><span class="list_thtext">신청자</span></th>
+                          <th><span class="list_thtext">신청일자</span></th>
+                          <th><span class="list_thtext">승인상태</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="has_form">
+                            <label class="props-checkbox">
+                              <input type="checkbox" />
+                              <i class="indicator"></i>
+                            </label>
+                          </td>
+                          <td><span class="list_tdtext">96</span></td>
+                          <td><span class="list_tdtext">국회의실2</span></td>
+                          <td class="define_title"><a href="#" class="list_tdtext blue_emp bold ellips">행사명 작성했습니다.행사명 작성했습니다.행사명 작성했습니다.</a></td>
+                          <td><span class="list_tdtext">성남시청</span></td>
+                          <td><span class="list_tdtext">성남시청(정보통신과)</span></td>
+                          <td><span class="list_tdtext">이미영</span></td>
+                          <td><span class="list_tdtext">2025-06-24</span></td>
+                          <td><span class="list_tdtext red_emp">미승인</span></td>
+                        </tr>
+                        <tr>
+                          <td class="has_form">
+                            <label class="props-checkbox">
+                              <input type="checkbox" />
+                              <i class="indicator"></i>
+                            </label>
+                          </td>
+                          <td><span class="list_tdtext">96</span></td>
+                          <td><span class="list_tdtext">국회의실1</span></td>
+                          <td class="define_title"><a href="#" class="list_tdtext blue_emp bold ellips">국회의실1</a></td>
+                          <td><span class="list_tdtext">성남시청</span></td>
+                          <td><span class="list_tdtext">성남시청(정보통신과)</span></td>
+                          <td><span class="list_tdtext">이미영</span></td>
+                          <td><span class="list_tdtext">2025-06-24</span></td>
+                          <td><span class="list_tdtext">1차승인</span></td>
+                        </tr>
+                        <tr>
+                          <td class="has_form">
+                            <label class="props-checkbox">
+                              <input type="checkbox" />
+                              <i class="indicator"></i>
+                            </label>
+                          </td>
+                          <td><span class="list_tdtext">96</span></td>
+                          <td><span class="list_tdtext">국회의실1</span></td>
+                          <td class="define_title"><a href="#" class="list_tdtext blue_emp bold ellips">국회의실1</a></td>
+                          <td><span class="list_tdtext">성남시청</span></td>
+                          <td><span class="list_tdtext">성남시청(정보통신과)</span></td>
+                          <td><span class="list_tdtext">이미영</span></td>
+                          <td><span class="list_tdtext">2025-06-24</span></td>
+                          <td><span class="list_tdtext blue_emp">승인완료</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="btn_float_wrap">
+                  <div class="btn_float_left">
+                    <button class="adm_btn btn_pink_txt">주간일정조회</button>
+                    <button class="adm_btn btn_pink_txt">당월정기대관등록</button>
+                    <button class="adm_btn btn_pink_txt">승인처리</button>
+                  </div>
+                  <div class="btn_float_right">
+                    <button class="adm_btn btn_lightgray">엑셀변환</button>
+                    <button class="adm_btn btn_lightgray">새로고침</button>
+                    <button class="adm_btn btn_pink_bg">신청</button>
+                  </div>
+                </div>
+                <div class="board_paging_row">
+                  <a href="javascript:;" class="btn_paging_control first"></a>
+                  <a href="javascript:;" class="btn_paging_control prev"></a>
+                  <ul class="paging_num_list">
+                    <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">4</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">5</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">6</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">7</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">8</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">9</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+                    <!-- <li><span class="btn_paging_num clamp_text">...</span></li> -->
+                  </ul>
+                  <a href="javascript:;" class="btn_paging_control next"></a>
+                  <a href="javascript:;" class="btn_paging_control last"></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
