@@ -2,6 +2,20 @@
 .popup_item.size5 { max-width: 600px; }
 .popup_item.size6 { max-width: 890px; }
 
+/* text */
+.pgtext{font-family: 'Paperlogy';}
+
+/* bullet */
+.bullet_title{position:relative; padding-left:20px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #000;
+    font-family: 'Paperlogy';
+}
+.bullet_title:before{display:block;content:'';width:16px;height:16px; position:absolute;top:9px;left:0; background:url("../images/ico_circle.png") no-repeat 0 0/100% auto;}
 
 /* button */
 button.btn_data_search{font-family: 'Paperlogy';}
@@ -29,6 +43,8 @@ button.btn_data_search.skin2{background-color:#8b1c74;}
 /* table */
 .stb_thtext{font-family: 'Paperlogy'; display:inline-block; font-size:16px; word-break:keep-all;}
 .sort_tb td.td_skin2{padding-left:0;background:#f3e8f1;}
+.list_table .has_total_dom{font-size:0 !important;line-height:0 !important;}
+.list_table .has_form{font-size:0 !important;line-height:0 !important;}
 
 /* form */
 .sc_form_guide_row{margin-bottom:15px;}
