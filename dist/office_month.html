@@ -381,7 +381,322 @@
 					<div class="sub_right_title_row">
 						<h2 class="sub_right_title">국회의실</h2>
 					</div>
-					<div class="sub_contents">내용이 들어갑니다.</div>
+					<div class="sub_contents">
+						<div class="sctab_wrap">
+							<ul class="sctab_list">
+								<li>
+									<a href="#" class="sctab active"><span class="text_node">월간일정</span></a>
+								</li>
+								<li>
+									<a href="#" class="sctab"><span class="text_node">주간일정</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="sort_tb_wrap">
+							<table class="sort_tb">
+								<caption>월간일정표</caption>
+								<colgroup>
+									<col style="width: 100px" />
+									<col />
+									<col style="width: 100px" />
+									<col />
+								</colgroup>
+								<tr>
+									<th>
+										<span class="stb_thtext">정보누리실</span>
+									</th>
+									<td>
+										<div class="inline_td_list full_type">
+											<div class="inline_cols">
+												<select required class="form_select tb_border dtype2 wp100">
+													<option value="">-- 전체 --</option>
+													<option value="opt_01">09</option>
+													<option value="opt_02">10</option>
+												</select>
+											</div>
+											<div class="inline_cols empty"></div>
+											<div class="inline_cols">
+												<select required="" class="form_select tb_border dtype2 wp100">
+													<option value="" disabled hidden>-- 전체 --</option>
+													<option value="opt_01" selected>2025</option>
+													<option value="opt_02">10</option>
+												</select>
+											</div>
+											<div class="inline_cols empty2"></div>
+											<div class="inline_cols fixed"><span class="inline_unit">년</span></div>
+											<div class="inline_cols empty3"></div>
+											<div class="inline_cols">
+												<select required="" class="form_select tb_border dtype2 wp100">
+													<option value="" disabled hidden>-- 전체 --</option>
+													<option value="opt_01" selected>09</option>
+													<option value="opt_02">10</option>
+												</select>
+											</div>
+											<div class="inline_cols empty2"></div>
+											<div class="inline_cols fixed"><span class="inline_unit">월</span></div>
+										</div>
+									</td>
+									<th>
+										<span class="stb_thtext">기관</span>
+									</th>
+									<td>
+										<div class="inline_td_list full_type">
+											<div class="inline_cols">
+												<select required class="form_select tb_border dtype2 wp100">
+													<option value="" disabled hidden>-- 전체 --</option>
+													<option value="opt_01">성남시청</option>
+													<option value="opt_02">10</option>
+												</select>
+											</div>
+											<div class="inline_cols empty"></div>
+											<div class="inline_cols fixed">
+												<button class="btn_inline_role secondary">검색</button>
+											</div>
+											<div class="inline_cols empty"></div>
+											<div class="inline_cols fixed">
+												<button class="btn_inline_role skin2 liquid define_prev">이전달</button>
+											</div>
+											<div class="inline_cols empty2"></div>
+											<div class="inline_cols fixed">
+												<button class="btn_inline_role skin2 liquid define_next">다음달</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="sort_tb_box">
+							<div class="stb_in_btb">
+								<div class="stb_cols define_th">
+									<select class="form_select tb_border dtype2">
+										<option>국회의실 사용시간 조회</option>
+									</select>
+								</div>
+								<div class="stb_cols define_td">
+									<!-- prettier-ignore -->
+									<p class="stb_warn_para">!주의 : 현재 <span class="color_emp blue">[미승인]</span>된 국회의실 일정은 붉은색으로 표시됩니다.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="sc_block_wrap">
+							<div class="sc_block">
+								<div class="sc_btitle_row">
+									<p class="sc_btitle">국회의실 사용신청</p>
+								</div>
+								<div class="sc_bcontents_row">
+									<div class="month_tb_wrap">
+										<table class="month_tb">
+											<thead>
+												<tr>
+													<th class="sun"><span class="month_thtext">일</span></th>
+													<th><span class="month_thtext">월</span></th>
+													<th><span class="month_thtext">화</span></th>
+													<th><span class="month_thtext">수</span></th>
+													<th><span class="month_thtext">목</span></th>
+													<th><span class="month_thtext">금</span></th>
+													<th class="sat"><span class="month_thtext">토</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="sun empty"></td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">1</span></div>
+															<div class="td_cont define_cont">
+																<div class="month_cont_text">(07.15)</div>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">2</span></div>
+															<div class="td_cont define_cont">
+																<div class="month_cont_text">(07.15)</div>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">3</span></div>
+															<div class="td_cont define_cont">
+																<div class="month_cont_text">(07.15)</div>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">4</span></div>
+															<div class="td_cont define_cont">
+																<div class="month_cont_text">(07.15)</div>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">5</span></div>
+															<div class="td_cont define_cont">
+																<div class="month_cont_text">(07.15)</div>
+															</div>
+														</div>
+													</td>
+													<td class="sat">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">6</span></div>
+															<div class="td_cont define_cont">
+																<div class="month_cont_text">(07.15)</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="sun">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">7</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">8</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">9</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">10</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">11</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">12</span></div>
+														</div>
+													</td>
+													<td class="sat">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">13</span></div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="sun">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">14</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">15</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">16</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">17</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">18</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">19</span></div>
+														</div>
+													</td>
+													<td class="sat">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">20</span></div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="sun">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">21</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">22</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">23</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">24</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">25</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">26</span></div>
+														</div>
+													</td>
+													<td class="sat">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">27</span></div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="sun">
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">28</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">29</span></div>
+														</div>
+													</td>
+													<td>
+														<div class="td_cont_tb">
+															<div class="td_cont define_date"><span class="month_date">30</span></div>
+														</div>
+													</td>
+													<td class="empty"></td>
+													<td class="empty"></td>
+													<td class="empty"></td>
+													<td class="sat empty"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="btn_float_wrap mt20">
+							<div class="btn_float_right">
+								<button class="adm_btn btn_lightgray">새로고침</button>
+								<button class="adm_btn btn_pink_bg pd2">신청</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
