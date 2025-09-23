@@ -1,6 +1,7 @@
 /* popup */
 .popup_item.size5 { max-width: 600px; }
 .popup_item.size6 { max-width: 890px; }
+.popup_wrap{min-width:1280px;}
 
 /* text */
 .pgtext{font-family: 'Paperlogy';}
@@ -39,6 +40,8 @@ button.btn_data_search.skin2{background-color:#8b1c74;}
 .sc_block:last-of-type{margin-bottom:0 !important;}
 .sc_btitle_row{margin-bottom:17px;}
 .sc_btitle{font-family: 'Paperlogy'; font-size:18px; font-weight: 500; color:#77015e;}
+
+.sc_block_wrap input[type="text"].fr_input_txt{margin:0 !important;}
 
 /* table */
 .stb_thtext{font-family: 'Paperlogy'; display:inline-block; font-size:16px; word-break:keep-all;}

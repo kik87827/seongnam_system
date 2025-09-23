@@ -760,23 +760,163 @@
                   <h3 class="popup_title">정기대관현황</h3>
                 </div>
                 <div class="popup_contents_row">
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
-                  <br />
-                  내용
+                  <!--  -->
+                  <div class="sc_block_wrap">
+                    <div class="sc_block">
+                      <div class="sc_btitle_row">
+                        <p class="sc_btitle">정기대관등록</p>
+                      </div>
+                      <div class="sc_bcontents_row">
+                        <div class="sort_tb_wrap">
+                          <table class="sort_tb">
+                            <caption>정기대관등록표</caption>
+                            <colgroup>
+                              <col style="width: 13%" />
+                              <col style="width: 28%" />
+                              <col style="width: 13%" />
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  기관
+                                </span>
+                              </th>
+                              <td>
+                                <select required class="form_select tb_border dtype2" style="width: 110px">
+                                  <option value="" disabled hidden>-- 전체 --</option>
+                                  <option value="opt_01" selected>성남시청</option>
+                                  <option value="opt_02">울산시청</option>
+                                </select>
+                              </td>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  정보누리실
+                                </span>
+                              </th>
+                              <td>
+                                <select required class="form_select tb_border dtype2" style="width: 110px">
+                                  <option value="">-- 전체 --</option>
+                                  <option value="opt_01">옵션</option>
+                                  <option value="opt_02">옵션</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  요일
+                                </span>
+                              </th>
+                              <td>
+                                <select required class="form_select tb_border dtype2" style="width: 110px">
+                                  <option value="">-- 전체 --</option>
+                                  <option value="opt_01">월요일</option>
+                                  <option value="opt_02">화요일</option>
+                                </select>
+                              </td>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  시간
+                                </span>
+                              </th>
+                              <td>
+                                <!--  -->
+                                <div class="inline_td_list">
+                                  <div class="inline_cols">
+                                    <select required="" class="form_select tb_border dtype2" style="width: 65px">
+                                      <option value="" disabled="" hidden="">-- 전체 --</option>
+                                      <option value="opt_01" selected="">09</option>
+                                      <option value="opt_02">10</option>
+                                    </select>
+                                  </div>
+                                  <div class="inline_cols empty2"></div>
+                                  <div class="inline_cols fixed"><span class="inline_unit">시</span></div>
+                                  <div class="inline_cols empty"></div>
+                                  <div class="inline_cols">
+                                    <select required="" class="form_select tb_border dtype2" style="width: 65px">
+                                      <option value="" disabled="" hidden="">-- 전체 --</option>
+                                      <option value="opt_01" selected="">00</option>
+                                      <option value="opt_02">10</option>
+                                    </select>
+                                  </div>
+                                  <div class="inline_cols empty2"></div>
+                                  <div class="inline_cols fixed"><span class="inline_unit">분</span></div>
+                                  <div class="inline_cols has_unit2"><span class="date_flow">~</span></div>
+                                  <div class="inline_cols">
+                                    <select required="" class="form_select tb_border dtype2" style="width: 65px">
+                                      <option value="" disabled="" hidden="">-- 전체 --</option>
+                                      <option value="opt_01" selected="">09</option>
+                                      <option value="opt_02">10</option>
+                                    </select>
+                                  </div>
+                                  <div class="inline_cols empty2"></div>
+                                  <div class="inline_cols fixed"><span class="inline_unit">시</span></div>
+                                  <div class="inline_cols empty"></div>
+                                  <div class="inline_cols">
+                                    <select required="" class="form_select tb_border dtype2" style="width: 65px">
+                                      <option value="" disabled="" hidden="">-- 전체 --</option>
+                                      <option value="opt_01" selected="">00</option>
+                                      <option value="opt_02">10</option>
+                                    </select>
+                                  </div>
+                                  <div class="inline_cols empty2"></div>
+                                  <div class="inline_cols fixed"><span class="inline_unit">분</span></div>
+                                </div>
+                                <!-- // -->
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  사용자
+                                </span>
+                              </th>
+                              <td><input type="text" class="fr_input_txt wp100" /></td>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  대표자
+                                </span>
+                              </th>
+                              <td><input type="text" class="fr_input_txt wp100" /></td>
+                            </tr>
+                            <tr>
+                              <th>
+                                <span class="stb_thtext">
+                                  <span class="import">*</span>
+                                  연락처
+                                </span>
+                              </th>
+                              <td><input type="text" class="fr_input_txt wp100" /></td>
+                              <th><span class="stb_thtext">인원</span></th>
+                              <td>
+                                <div class="inline_td_list">
+                                  <div class="inline_cols">
+                                    <input type="text" class="fr_input_txt dtype2 align_r" style="width: 70px" />
+                                  </div>
+                                  <div class="inline_cols empty2"></div>
+                                  <div class="inline_cols fixed">
+                                    <span class="inline_unit">명</span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th><span class="stb_thtext">비고</span></th>
+                              <td colspan="3"><input type="text" class="fr_input_txt wp100" /></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // -->
                 </div>
                 <div class="popup_btn_row btn_box_wrap">
                   <!-- close_trigger 있을시 닫기 -->
