@@ -1,3 +1,27 @@
+/* header 0929 추가 */
+.header_nav_inner.has_depth{height:112px;}
+.header_nav_inner.has_depth .header_nav_container{padding-left:91px;width:100%; box-sizing: border-box;}
+.header_nav_inner.has_depth .header_nav_container .header_nav_menu:hover{color:#000;}
+.header_nav_inner.has_depth .header_nav_main_wrap{padding:0; }
+.header_nav_inner.has_depth .header_nav_main_wrap.else_case{position:relative;}
+.header_nav_inner.has_depth .header_nav_main_wrap.else_case .header_nav_list > li{position:static;}
+.header_nav_inner.has_depth .header_nav_main_wrap.else_case .header_nav_depth_wrap{}
+.header_nav_inner.has_depth .header_nav_list{height:112px; margin:0 auto;}
+.header_nav_inner.has_depth .header_nav_list > li{vertical-align: top; padding-top:33px; padding:33px 30px 0; position:relative;}
+.header_nav_inner.has_depth .header_nav_list > li.active .header_nav_menu{color:#8b1c74;}
+.header_nav_inner.has_depth .header_nav_sub_wrap{vertical-align: top;padding:14px 0;width:0;white-space: nowrap;}
+.header_nav_inner.has_depth.many_type .header_nav_list > li{vertical-align: top; padding-top:33px; padding:33px 15px 0; position:relative;}
+.header_nav_depth_wrap{position:absolute;top:72px;left:50%;  transform: translateX(-50%); display:none;}
+.header_nav_depth_wrap.left_pos{left:10px;transform: translateX(0); right:auto;}
+.header_nav_depth_wrap.right_pos{right:10px;transform: translateX(0); left:auto;}
+.header_nav_depth_list{display:table;white-space: nowrap;}
+.header_nav_depth_list > li{display:table-cell;vertical-align: middle; padding-right:25px; position:relative;}
+.header_nav_depth_list > li:after{display:block;content:'';width:1px;height:14px; background:#e0b9d5; position:absolute;top:50%;right:12.5px; transform: translateY(-50%);}
+.header_nav_depth_list > li:last-of-type{padding-right:0;}
+.header_nav_depth_list > li:last-of-type:after{display:none;}
+.header_nav_depth{font-family: 'Paperlogy';display:inline-block; font-size:15px; font-weight:500;}
+.header_nav_depth:hover{color:#8b1c74;}
+
 /* popup */
 .popup_item.size5 { max-width: 600px; }
 .popup_item.size6 { max-width: 890px; }
