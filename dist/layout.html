@@ -500,13 +500,13 @@
 				});
 				// event
 				$(".header_nav_list > li").on("mouseenter", function() {
-					const thismenu = $(this);
-					const depthmenu = thismenu.find(".header_nav_depth_wrap");
+					var thismenu = $(this);
+					var depthmenu = thismenu.find(".header_nav_depth_wrap");
 					posReset();
 					thismenu.addClass("active");
 					depthmenu.show();
-					let stand_start = $(".header_nav_main_wrap").offset().left;
-					let stand_end = $(".header_nav_main_wrap").offset().left + $(".header_nav_main_wrap").outerWidth(true);
+					var stand_start = $(".header_nav_main_wrap").offset().left;
+					var stand_end = $(".header_nav_main_wrap").offset().left + $(".header_nav_main_wrap").outerWidth(true);
 					if (depthmenu.offset().left <= stand_start) {
 						$(".header_nav_main_wrap").addClass("else_case");
 						depthmenu.addClass("left_pos");
