@@ -10,8 +10,8 @@ $(window).on("load",function(){
 });
 
 function commonInit() {
-  let touchstart = "ontouchstart" in window;
-  let userAgent = navigator.userAgent.toLowerCase();
+  var touchstart = "ontouchstart" in window;
+  var userAgent = navigator.userAgent.toLowerCase();
   if (touchstart) {
     browserAdd("touchmode");
   }
@@ -50,7 +50,7 @@ function footerFunc() {
   });
 
   $(".btn_slick_control.nav_auto").on("click", function () {
-    let $this = $(this);
+    var $this = $(this);
     $this.toggleClass("play");
 
     if ($this.hasClass("play")) {
@@ -101,7 +101,7 @@ function footerFunc() {
     // event
     this.btn_close = this.selector.querySelectorAll(".btn_popup_close");
     this.bg_design_popup = this.selector.querySelector(".bg_dim");
-    let closeItemArray = [...this.btn_close];
+    var closeItemArray = [...this.btn_close];
     if (!!this.selector.querySelectorAll(".close_trigger")) {
       this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
       closeItemArray.push(...this.btn_closeTrigger);
@@ -148,8 +148,8 @@ function footerFunc() {
     this.dimCheck();
   }
   popupHide(option) {
-    let target = this.option.selector;
-    let instance_option = option;
+    var target = this.option.selector;
+    var instance_option = option;
     if (!!target) {
       this.selector.classList.remove("motion");
       if ("beforeClose" in this.option) {
@@ -162,7 +162,7 @@ function footerFunc() {
       this.selector.classList.remove("motion_end");
       setTimeout(() => {
         this.selector.classList.remove("active");
-        let closeTimer = 0;
+        var closeTimer = 0;
         if (closeTimer) {
           clearTimeout(closeTimer);
           closeTimer = 0;
@@ -190,16 +190,16 @@ function footerFunc() {
 
 /* function designModal(option) {
   const modalGroupCreate = document.createElement("div");
-  let domHtml = document.querySelector("html");
-  let design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
-  let modal_wrap_parent = null;
-  let modal_item = null;
-  let pagewrap = document.querySelector(".page_wrap");
-  let showNum = 0;
-  let okTextNode = option.okText ?? '확인';
-  let cancelTextNode = option.cancelText ?? '취소';
-  let closeBtnDisplay = option.closeDisplay ?? true;
-  let submitBtnDisplay = option.submitDisplay ?? true;
+  var domHtml = document.querySelector("html");
+  var design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
+  var modal_wrap_parent = null;
+  var modal_item = null;
+  var pagewrap = document.querySelector(".page_wrap");
+  var showNum = 0;
+  var okTextNode = option.okText ?? '확인';
+  var cancelTextNode = option.cancelText ?? '취소';
+  var closeBtnDisplay = option.closeDisplay ?? true;
+  var submitBtnDisplay = option.submitDisplay ?? true;
   modalGroupCreate.classList.add("modal_wrap_parent");
 
   if (!modal_wrap_parent && !document.querySelector(".modal_wrap_parent")) {
@@ -209,7 +209,7 @@ function footerFunc() {
   }
   modal_wrap_parent = document.querySelector(".modal_wrap_parent");
 
-  let btnHTML = ``;
+  var btnHTML = ``;
 
   if (option.modaltype === "confirm") {
     btnHTML = `
@@ -223,7 +223,7 @@ function footerFunc() {
   }
 
 
-  let modal_template = `
+  var modal_template = `
     <div class="modal_wrap">
         <div class="bg_dim"></div>
         <div class="modal_box_tb">
@@ -257,15 +257,15 @@ function footerFunc() {
     });
   }, 10);
 
-  let btn_modal_submit_wrap = modal_item.querySelector(".btn_modal_submit_wrap");
-  let btn_modal_submit = modal_item.querySelectorAll(".btn_modal_submit");
-  let btn_modal_close = modal_item.querySelectorAll(".btn_modal_close");
+  var btn_modal_submit_wrap = modal_item.querySelector(".btn_modal_submit_wrap");
+  var btn_modal_submit = modal_item.querySelectorAll(".btn_modal_submit");
+  var btn_modal_close = modal_item.querySelectorAll(".btn_modal_close");
   if (!submitBtnDisplay) {
     modal_item.querySelector(".modal_box_item").classList.add("submit_not");
   }
   if (!!btn_modal_submit) {
     btn_modal_submit.forEach((item) => {
-      let eventIs = false;
+      var eventIs = false;
 
       if (!submitBtnDisplay) {
         item.remove();
@@ -275,7 +275,7 @@ function footerFunc() {
           item.removeEventListener("click");
         }
         item.addEventListener("click", (e) => {
-          let thisTarget = e.currentTarget;
+          var thisTarget = e.currentTarget;
           closeAction();
           if (thisTarget.classList.contains("okcall")) {
             if (option.okcallback) {
@@ -298,7 +298,7 @@ function footerFunc() {
   }
   if (!!btn_modal_close) {
     btn_modal_close.forEach((item) => {
-      let eventIs = false;
+      var eventIs = false;
       if (!closeBtnDisplay) {
         item.remove();
       } else {
@@ -314,7 +314,7 @@ function footerFunc() {
   }
 
   function closeAction() {
-    let actionNum = 0;
+    var actionNum = 0;
     modal_item.classList.remove("motion_end");
     if (design_popup_wrap_active.length === 0) {
       domHtml.classList.remove("touchDis");

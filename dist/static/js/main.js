@@ -134,7 +134,7 @@ function maxHeightEach() {
 
 
 function slickControlCardCall() {
-  const $banner_container = $(".banner_container");
+  var $banner_container = $(".banner_container");
 
   $banner_container.each(function() {
     var $thisContainer = $(this);

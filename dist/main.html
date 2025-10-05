@@ -3449,10 +3449,10 @@
 	<!-- Modal Script -->
 	<script>
 		$(function() {
-			let url = window.location.href.split("?")[1];
-			let url_2 = url !== undefined ? url.split("#")[0] : null;
+			var url = window.location.href.split("?")[1];
+			var url_2 = url !== undefined ? url.split("#")[0] : null;
 			if (url_2 === "shortcutPopup") {
-				setTimeout(() => {
+				setTimeout(function() {
 					popupShow({
 						target: "#shortcutPopup",
 						callback: function() {
